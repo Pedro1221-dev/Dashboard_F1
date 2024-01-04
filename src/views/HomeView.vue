@@ -84,8 +84,8 @@
 </template>
 
 <script>    
-import { RouterLink } from 'vue-router';
 import { useUserStore } from "@/stores/user";
+import { RouterLink } from 'vue-router';
 
 
 
@@ -106,21 +106,18 @@ export default {
 
 <style lang="scss" scoped> 
 
-@font-face {
-  font-family: 'Tektur';
-  src: url('path/to/tektur-font.woff') format('woff');
-}
-
 body, html {
   height: 100%;
   margin: 0;
+  background-color: blue;
 }
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 100vh); /* Each row takes up the full viewport height */
-  overflow: hidden;
+  // overflow: hidden;
 }
+
 .grid-item {
   text-align: center;
 }
@@ -135,13 +132,13 @@ body, html {
   display: flex;
   margin-right: 10%; /* Push the "leclerc" image to the right */
   // text-align: right !important;
-
 }
 
 .navbar {
   text-align: center;
   display: flex;
   margin-left: 15%;
+
 }
 .navbar-icon {
   display: flex;
