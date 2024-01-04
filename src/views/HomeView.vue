@@ -30,25 +30,17 @@
       </div>
 
       <div class="navbar-icon">
-          <a href="#" class="login-link">
-              <img src="src/img/icons/login.png" alt="Login">
-          </a>
-          <a href="#" class="dashboard-link">
-              <img src="src/img/icons/dashboard.png" alt="Dashboard">
-          </a>
+            <RouterLink :to="{ name: 'login' }" class="login-link">
+                <img src="src/img/icons/login.png" alt="Login">
+            </RouterLink>
+            <RouterLink :to="{ name: 'dashboard' }" class="dashboard-link">
+                <img src="src/img/icons/dashboard.png" alt="Dashboard">
+            </RouterLink>
       </div>
-
-      
   </div>
 
-    <!-- Buttons -->
-    <!-- <div class="button-container">
-      <RouterLink :to="{ name: 'login' }">Login</RouterLink>
-      <RouterLink :to="{ name: 'register' }" class="ml-10">Register</RouterLink>
-    </div> -->
-
   <div class="image-container">
-      <img src="src/images/car.png" alt="" style="width: 1500px; height: auto; opacity: 0.80;">    
+      <img src="src/img/car.png" alt="" style="width: 1500px; height: auto; opacity: 0.80;">    
   </div>
 
 
@@ -62,6 +54,7 @@
 </template>
 
 <script>    
+import { RouterLink } from 'vue-router';
 export default {
   name: 'DashboardF1HomeView',
 
