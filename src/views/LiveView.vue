@@ -65,3 +65,7 @@ components: {
   </v-table>
   </div>
 </template>
+
+<style>
+
+</style>
