@@ -31,10 +31,10 @@
 
       <div class="navbar-icon">
           <a href="#" class="login-link">
-              <img src="src/images/icons/login.png" alt="Login">
+              <img src="src/img/icons/login.png" alt="Login">
           </a>
           <a href="#" class="dashboard-link">
-              <img src="src/images/icons/dashboard.png" alt="Dashboard">
+              <img src="src/img/icons/dashboard.png" alt="Dashboard">
           </a>
       </div>
 
