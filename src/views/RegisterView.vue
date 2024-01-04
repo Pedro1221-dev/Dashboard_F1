@@ -69,7 +69,7 @@ export default {
     register() {
       try {
         this.store.register(this.first,this.last,this.username, this.password)
-        this.$router.push({ name: "dashboard" });
+        this.$router.push({ name: "home" });
       } catch (error) {
          alert(`Error: ${error.message}`); 
       }

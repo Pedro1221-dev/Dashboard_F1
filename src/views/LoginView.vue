@@ -76,7 +76,7 @@ export default {
     login() {
       try {
         this.store.login(this.username, this.password)
-        this.$router.push({ name: "dashboard" });
+        this.$router.push({ name: "home" });
       } catch (error) {
          alert(`Error: ${error.message}`); 
       }
