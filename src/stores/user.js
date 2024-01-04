@@ -41,6 +41,7 @@ export const useUserStore = defineStore("user", {
       if (user) {
         this.isUserAuthenticated = true;
         this.user = user;
+        console.log(this.isUserAuthenticated);
       } else {
         throw Error("User invalid!");
       }
