@@ -82,7 +82,6 @@ components: {
     </thead>
     <tbody>
       <tr v-for="(pilot, position) in tableData.pilots" :key="position">
-          <td>{{ carByPilot(pilot.name) }}</td>
           <td><img :src=carByPilot(pilot.name) alt="car"></td>
           <td>{{ pilot.name }}</td>
           <td v-if="position<1">{{ tableData.time }}</td>
@@ -106,5 +105,8 @@ components: {
 .table tbody tr:nth-child(even) td {
   background-color: rgba(0, 0, 0, 0);
 }
-
+td img{
+  width: 150px;
+  height: 40px;
+}
 </style>
