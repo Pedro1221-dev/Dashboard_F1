@@ -28,7 +28,7 @@
               <a href="#series">Series</a>
            </div>
            <div class="navbar-icon">
-              <RouterLink v-if="!isUserAuthenticated" :to="{ name: 'login' }" class="login-link">
+              <RouterLink v-if="!store.isUserAuthenticated" :to="{ name: 'login' }" class="login-link">
                   <img src="src/img/icons/login.png" alt="Login">
               </RouterLink>
 
@@ -85,20 +85,22 @@
 
 <script>    
 import { RouterLink } from 'vue-router';
+import { useUserStore } from "@/stores/user";
+
+
+
 export default {
-name: 'DashboardF1HomeView',
+  name: 'DashboardF1HomeView',
 
-data() {
-  return { };
-},
+  setup() {
+    const store = useUserStore();
+    return { store };
+  },
 
-mounted() {
-  
-},
-
-methods: {
-  
-},
+  mounted() {
+    const store = useUserStore();
+    console.log(store.isUserAuthenticated);
+  },
 };
 </script>
 
