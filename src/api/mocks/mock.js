@@ -177,7 +177,7 @@ export default[
           { name:'stroll',firstname:'lance', time: "16:873", pitstops:'0',tyre:'../src/img/pneus/s.png'},
           { name:'magnussen',firstname:'kevin', time: "17:190", pitstops:'1',tyre:'../src/img/pneus/m.png'},
           { name:'zhou',firstname:'guanyu', time: "17:756", pitstops:'0',tyre:'../src/img/pneus/s.png'},
-          { name:'bottas',firstname:'valtteri', time: "18:087", pitstops:'0',tyre:'../src/img/pneus/s.rpng'},
+          { name:'bottas',firstname:'valtteri', time: "18:087", pitstops:'0',tyre:'../src/img/pneus/s.png'},
           { name:'piastri',firstname:'oscar', time: "18:620", pitstops:'1',tyre:'../src/img/pneus/h.png'}
         ]
       },

@@ -6,7 +6,7 @@
     <v-table class="table">
       <thead>
         <tr>
-          <th colspan="2" class="text-center">Distance: {{ tableData.distance }}</th>
+          <th colspan="5" class="text-center">Distance: {{ tableData.distance }}</th>
         </tr>
         <tr>
           <th class="text-left"></th>
@@ -121,6 +121,9 @@ export default {
 </script>
 
 <style>
+.v-table__wrapper {
+  margin-bottom: 20px !important;
+}
 .table {
   background: rgba(0, 0, 0, 0) !important;
   color: white !important; 

@@ -83,11 +83,18 @@ export default {
     top: -4vh;
 }
 
-.div1 { grid-area: 1 / 5 / 4 / 7; }
+.div1 { grid-area: 1 / 5 / 4 / 7;
+ }
 .div2 { grid-area: 4 / 5 / 7 / 7; }
 .div3 { grid-area: 4 / 3 / 7 / 5; }
 .div4 { grid-area: 4 / 1 / 7 / 3; }
-.div5 { grid-area: 3 / 1 / 4 / 5; }
+.div5 {
+  grid-area: 3 / 1 / 4 / 5;
+  background-image: url('../img/backFantasy.jpg');
+  background-size: cover; /* ou 'contain' se você quiser que a imagem se ajuste dentro da div */
+  background-repeat: no-repeat;
+  background-position: 0px -80px;
+}
 .div6 { grid-area: 1 / 1 / 3 / 5; }
 
 .profile {
