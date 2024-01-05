@@ -48,14 +48,13 @@
       </v-btn>
 
       <v-card-text class="text-center">
-        <a
+        <router-link
+          to="/register"
           class="text-blue text-decoration-none"
-          href="#"
           rel="noopener noreferrer"
-          target="_blank"
         >
           Sign up now <v-icon icon="mdi-chevron-right"></v-icon>
-        </a>
+        </router-link>
       </v-card-text>
     </v-card>
   </div>

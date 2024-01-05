@@ -11,6 +11,7 @@ a,
   margin-left: 160px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 2rem;
+  max-height: 100vh
 }
 
 @font-face {
@@ -22,8 +23,62 @@ a,
   font-family: 'Onest';
   src: url('./fonts/Onest.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Onest';
+  src: url('./fonts/Onest-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Onest';
+  src: url('./fonts/Onest-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Onest';
+  src: url('./fonts/Onest-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
+.bold {
+  font-family: 'Onest', sans-serif;
+  font-weight: bold;
+}
+
+.light {
+  font-family: 'Onest', sans-serif;
+  font-weight: 300;
+}
+
+.thin {
+  font-family: 'Onest', sans-serif;
+  font-weight: 100;
+}
 
 body {
   font-family: 'Onest';  
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #be0e0e rgba(255, 255, 255, 0);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #be0e0e;
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0);
+  }
 

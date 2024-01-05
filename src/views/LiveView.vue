@@ -9,9 +9,9 @@
           <th colspan="2" class="text-center">Distance: {{ tableData.distance }}</th>
         </tr>
         <tr>
-          <th class="text-left">Equipa</th>
-          <th class="text-left">Name</th>
-          <th class="text-left">Time</th>
+          <th class="text-left"></th>
+          <th class="text-left"></th>
+          <th class="text-left">Tempo</th>
           <th class="text-left">Pneus</th>
           <th class="text-left">PitStops</th>
         </tr>
@@ -23,7 +23,7 @@
               <img :src="carByPilot(pilot.name)" alt="car">
             </div>
           </td>
-          <td>{{pilot.firstname }} <b style="font-size=12px">{{ pilot.name }}</b></td>
+          <td class="thin">{{pilot.firstname }} <span class="bold">{{ pilot.name }}</span></td>
           <td v-if="position < 1">{{ tableData.time }}</td>
           <td v-else>+ {{ pilot.time }}</td>
           <td>
@@ -103,8 +103,6 @@ export default {
     getTeamColor(driverName) {
       for (let team in this.driverMapping) {
         if (this.driverMapping[team].includes(driverName)) {
-          console.log(this.driverMapping[team]);
-          console.log(driverName)
           return this.teamColors[team];
         }
       }

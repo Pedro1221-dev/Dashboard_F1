@@ -66,14 +66,15 @@ export default {
     };
   },
   methods: {
-    register() {
-      try {
-        this.store.register(this.first,this.last,this.username, this.password)
-        this.$router.push({ name: "home" });
-      } catch (error) {
-         alert(`Error: ${error.message}`); 
-      }
-    },
+  async register() {
+    try {
+      await this.store.register(this.first, this.last, this.username, this.password);
+      await this.store.login(this.username, this.password);
+      this.$router.push({ name: "dashboard" }); // Redireciona para a página do dashboard após o login
+    } catch (error) {
+      alert(`Error: ${error.message}`);
+    }
+  },
   },
 };
 </script>

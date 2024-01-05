@@ -20,7 +20,6 @@
             <h2>Drivers:</h2>
               <p v-for="(driver, index) in selectedConstructor.drivers" :key="index">
                 {{ driver.name }}
-                <img :src="pilotPhoto(driver.name)" alt="">
               </p>
               
           </div>

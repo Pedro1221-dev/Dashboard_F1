@@ -32,7 +32,6 @@ export const useUserStore = defineStore("user", {
         // Adiciona o novo usuário à lista
         this.users.push(newUser);
         this.isUserAuthenticated = true;
-        console.log(this.users);
     },
     login(username, password) {
       const user = this.users.find(
