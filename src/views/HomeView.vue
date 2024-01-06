@@ -1,9 +1,9 @@
 <template>
   <div class="grid-container">
-     <div class="grid-item">
+    <div class="grid-item">
         <!-- SVG Background -->
         <div id="home" class="background">
-           <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="1119" viewBox="0 0 1920 1119" fill="none">
+           <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="1119" viewnews.news="0 0 1920 1119" fill="none">
               <path d="M0 0H1920V616C1920 616 1891.16 908.81 1811 1004C1730.84 1099.19 1531 1119 1531 1119H0V0Z" fill="url(#paint0_linear_335_992)"/>
               <defs>
                  <linearGradient id="paint0_linear_335_992" x1="0" y1="456" x2="1920" y2="456" gradientUnits="userSpaceOnUse">
@@ -43,51 +43,330 @@
           <div class="image-shadow"></div>
           <img src="src/img/car.png" alt="" style="width: 1200px; height: auto; opacity: 0.80;">    
       </div>
-     </div>
+    </div>
 
-     <div class="grid-item">
-        <div id="acerca" class="title">
-          <p>Acerca</p>
-          <img src="src/img/landingPage/hamilton.png" alt="" class="hamilton-left" width="211px" height="426px">
-          <img src="src/img/landingPage/leclerc.png" alt="" class="leclerc-right" width="211px" height="426px">
+
+    <div class="grid-item">
+      <div class="background-acerca">
+      <div id="acerca" class="acerca">
+        <div id="acerca" class="title" >
+          <br><b>Acerca</b><br>
         </div>
-     </div>
+        <div class="news-container">
+         <!-- Hamilton Section -->
+         <div class="news acerca-hamilton">
+            <div class="acerca-hamilton-title">Como Surgiu ?</div>
+            <p class="acerca-hamilton-text">
+               O 'Formula 1 Pulse' surge como um projeto interdisciplinar inovador na universidade, unindo conhecimentos em ciência
+               da computação, design de interfaces e análise de dados. Esta dashboard dinâmica proporciona uma visão envolvente da
+               Fórmula 1, destacando estatísticas e informações relevantes de maneira visualmente atrativa, resultado da paixão e
+               dedicação de uma equipa diversificada.
+            </p>
+            <div class="hamilton">
+               <div class="overlap-group">
+                  <img class="hamilton-image" alt="Image" src="src\img\news\hamilton.png" />
+               </div>
+            </div>
+         </div>
+         <!-- Leclerc Section -->
+         <div class="news acerca-leclerc">
+            <div class="acerca-leclerc-title">Para que Serve ?</div>
+            <p class="acerca-leclerc-text">
+               'Formula 1 Pulse' é uma ferramenta essencial para entusiastas e profissionais do desporto automobilístico.
+               Funcionando como uma dashboard abrangente, oferece acompanhamento em tempo real de estatísticas, resultados de
+               corridas e análises detalhadas, proporcionando uma perspetiva única sobre o desempenho das equipas e pilotos. Esta
+               plataforma representa uma fonte valiosa de insights e entretenimento, reunindo paixão, inovação e conhecimento num
+               só lugar.
+            </p>
+            <div class="leclerc">
+               <div class="overlap-group">
+                  <img class="leclerc-image" alt="Image" src="src\img\news\leclerc.png" />
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+    </div>
 
-     <div class="grid-item">
+    <div class="grid-item">
+        <div class="background-teams">
         <div id="equipas" class="title">
-           <p>Equipas</p>
+          <br>
+           <b>Equipas</b>
+        </div>
+        <div class="grid-teams">
+          <div class="grid-team">
+            <div class="teams">
+              <img class="mercedes" alt="Mercedes" src="src\img\teams\mercedes.png"/>
+              <div class="overlay">Mercedes</div>
+            </div>
+          </div>
+          <div class="grid-team">
+            <div class="teams">
+              <img class="ferrari" alt="Ferrari" src="src\img\teams\ferrari.png"/>
+              <div class="overlay">Ferrari</div>
+            </div>
+          </div>
+
+          <div class="grid-team">
+            <div class="teams">
+              <img class="redbull" alt="Red Bull" src="src\img\teams\redbull.png"/>
+              <div class="overlay">Red Bull</div>
+            </div>
+          </div>
+
+          <div class="grid-team">
+            <div class="teams">
+              <img class="alfaromeo" alt="Alfa Romeo" src="src\img\teams\alfa romeo.png"/>
+              <div class="overlay">Alfa Romeo</div>
+            </div>
+          </div>
+          <div class="grid-team">
+            <div class="teams">
+              <img class="mclaren" alt="McLaren" src="src\img\teams\mcLaren.png"/>
+              <div class="overlay">McLaren</div>
+            </div>
+          </div>
+          <div class="grid-team">
+            <div class="teams">
+              <img class="astonmartin" alt="Aston Martin" src="src\img\teams\aston martin.png"/>
+              <div class="overlay">Aston Martin</div>
+
+            </div>
+          </div>
+          <div class="grid-team">
+            <div class="teams">
+              <img class="haas" alt="Haas" src="src\img\teams\haas.png"/>
+              <div class="overlay">Haas</div>
+
+            </div>
+          </div>
+          <div class="grid-team">
+            <div class="teams">
+              <img class="alpine" alt="Alpine" src="src\img\teams\alpine.png"/>
+              <div class="overlay">Alpine</div>
+
+            </div>
+          </div>
+          <div class="grid-team">
+          </div>
+          <div class="grid-team">
+            <div class="teams">
+              <img class="alphatauri" alt="Alpha Tauri" src="src\img\teams\alpha tauri.png"/>
+              <div class="overlay">Alpha Tauri</div>
+            </div>
+          </div>
+          <div class="grid-team">
+            <div class="teams">
+              <img class="williams" alt="Williams" src="src\img\teams\williams.png"/>
+              <div class="overlay">Williams</div>
+            </div>
+          </div>       
+        </div>       
+      </div>
+    </div>
+
+
+    <div class="grid-item">
+      <div class="background-circuitos">
+        <div id="circuitos" class="title">
+            <br><b>Circuitos</b>
+        </div>
+        <div class="grid-tracks">
+          <div class="tracks">
+            <img src="src\img\tracks\bahrain.png" alt="Bahrain" class="track">
+            <div class="overlay">Bahrain</div>
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\Saudi Arabia.png" alt="Saudi Arabia" class="track">
+            <div class="overlay">Saudi Arabia</div>
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\Australia.png" alt="Australia" class="track">
+            <div class="overlay">Australia</div>
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\Japan.png" alt="Japan" class="track">
+            <div class="overlay">Japan</div>
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\China.png" alt="China" class="track">
+            <div class="overlay">China</div>
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\USA1.png" alt="United States" class="track">
+            <div class="overlay">United States</div>
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\Italy1.png" alt="Italy" class="track">
+            <div class="overlay">Italy</div>
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\Monaco.png" alt="Monaco" class="track">
+            <div class="overlay">Monaco</div>
+
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\Canada.png" alt="Canada" class="track">
+            <div class="overlay">Canada</div>
+
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\Spain.png" alt="Spain" class="track">
+            <div class="overlay">Spain</div>
+
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\Austria.png" alt="Austria" class="track">
+            <div class="overlay">Austria</div>
+
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\UK.png" alt="United Kingdom" class="track">
+            <div class="overlay">United Kingdom</div>
+
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\Hungary.png" alt="Hungary" class="track">
+            <div class="overlay">Hungary</div>
+
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\Belgium.png" alt="Belgium" class="track">
+            <div class="overlay">Belgium</div>
+
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\Netherlands.png" alt="Netherlands" class="track">
+            <div class="overlay">Netherlands</div>
+
+          </div>
+          <div class="tracks">
+            <img src="src\img\tracks\Italy2.png" alt="Italy" class="track">
+            <div class="overlay">Italy</div>
+
+          </div>
+
+          <div class="tracks">
+            <img src="src\img\tracks\Azerbaijan.png" alt="Azerbaijan" class="track">
+            <div class="overlay">Azerbaijan</div>
+
+          </div>
+
+          <div class="tracks">
+            <img src="src\img\tracks\Singapore.png" alt="Singapore" class="track">
+            <div class="overlay">Singapore</div>
+
+          </div>
+
+          <div class="tracks">
+            <img src="src\img\tracks\USA2.png" alt="United States" class="track">
+            <div class="overlay">United States</div>
+
+          </div>
+
+          <div class="tracks">
+            <img src="src\img\tracks\Mexico.png" alt="Mexico" class="track">
+            <div class="overlay">Mexico</div>
+
+          </div>
+
+          <div class="tracks">
+            <img src="src\img\tracks\Brazil.png" alt="Brazil" class="track">
+            <div class="overlay">Brazil</div>
+
+          </div>
+
+          <div class="tracks">
+            <img src="src\img\tracks\USA3.png" alt="United States" class="track">
+            <div class="overlay">United States</div>
+
+          </div>
+        
+          <div class="tracks">
+            <img src="src\img\tracks\Qatar.png" alt="Qatar" class="track">
+            <div class="overlay">Qatar</div>
+
+          </div>
+
+          <div class="tracks">
+            <img src="src\img\tracks\Abu Dhabi.png" alt="Abu Dhabi" class="track">
+            <div class="overlay">Abu Dhabi</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-item">
+      <div class="background-historia"></div>
+        <div id="historia" class="title">
+          <br><b>História</b><br>
+        </div>
+        <div id="historia" class="historia">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, in sunt? Dolores est facere maiores similique nulla magni nam reprehenderit, 
+            illo saepe aspernatur molestiae. A assumenda sit incidunt sequi corrupti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, in sunt? Dolores est facere maiores similique nulla magni nam reprehenderit, 
+            illo saepe aspernatur molestiae. A assumenda sit incidunt sequi corrupti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, in sunt? Dolores est facere maiores similique nulla magni nam reprehenderit, 
+            illo saepe aspernatur molestiae. A assumenda sit incidunt sequi corrupti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, in sunt? Dolores est facere maiores similique nulla magni nam reprehenderit, 
+            illo saepe aspernatur molestiae. A assumenda sit incidunt sequi corrupti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, in sunt? Dolores est facere maiores similique nulla magni nam reprehenderit, 
+            illo saepe aspernatur molestiae. A assumenda sit incidunt sequi corrupti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, in sunt? Dolores est facere maiores similique nulla magni nam reprehenderit, 
+            illo saepe aspernatur molestiae. A assumenda sit incidunt sequi corrupti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, in sunt? Dolores est facere maiores similique nulla magni nam reprehenderit, 
+            illo saepe aspernatur molestiae. A assumenda sit incidunt sequi corrupti?</p>
+        </div>
+      </div>
+    </div>
+
+     <div class="grid-item">
+        <div id="series" class="title">
+          <b>Séries</b>
+        </div>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="src\img\car.png" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="src\img\car.png" style="width:100%">
+            <div class="text">Caption Two</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="src\img\car.png" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" id="prevSlide">&#10094;</a>
+        <a class="next" id="nextSlide">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
      </div>
 
-     <div class="grid-item">
-          <div id="circuitos" class="title">
-              <p>Circuitos</p>
-          </div>
-     </div>
-
-     <div class="grid-item">
-          <div id="historia" class="title">
-              <p>História</p>
-          </div>
-     </div>
-
-     <div class="grid-item">
-          <div id="series" class="title">
-              <p>Séries</p>
-          </div>
-     </div>
+     <!-- Falta colocar o script para o carroussel funcionar, nao estava a conseguir -->
 
   <div class="grid-item">
       <div class="footer">FOOTER</div>
-  </div>
   </div>
 </template>
 
 <script>    
 import { useUserStore } from "@/stores/user";
 import { RouterLink } from 'vue-router';
-
-
 
 export default {
   name: 'DashboardF1HomeView',
@@ -114,32 +393,24 @@ body, html {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 100vh); /* Each row takes up the full viewport height */
+  //grid-template-rows: repeat(6, 100vh); /* Each row takes up the full viewport height */
+  grid-template-rows: 100vh 130vh 110vh 240vh 1vh 100vh;
   // overflow: hidden;
 }
 
-.grid-item {
+.title b {
   text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
-.hamilton-left {
-  display: flex;
-  margin-left: 10%;
-  text-align: left !important;
-}
-
-.leclerc-right {
-  display: flex;
-  margin-right: 10%; /* Push the "leclerc" image to the right */
-  // text-align: right !important;
-}
-
+// Navbar
 .navbar {
   text-align: center;
   display: flex;
   margin-left: 15%;
-
 }
+
 .navbar-icon {
   display: flex;
   flex-direction: row;
@@ -177,11 +448,12 @@ body, html {
   margin-left: 40px;
   margin-right: 40px;
 }
+
+// 
 .background {
   position: absolute;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,19 +494,345 @@ svg {
   z-index: 1; 
 }
 
-.title{
+.title {
   color: #B81A10;
-  font-family: Tektur;
-  font-size: 70px;
+  font-family: Tektur, bold;
+  font-size: 60px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-top: 2%;
 }
+
+/* ACERCA */
+
+.background-acerca{
+  background-color: #343535;
+  
+}
+.news {
+  height: 526px;
+  position: relative;
+  width: 1247px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* Hamilton Section */
+
+.news .acerca-hamilton-title {
+  color: #FFFFFF;
+  font-family: "Onest-Bold", Helvetica;
+  font-size: 35px;
+  font-weight: 700;
+  left: 369px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 58px;
+  width: 307px;
+}
+
+.news .acerca-hamilton-text {
+  color: #FFFFFF;
+  font-family: "Onest-Regular", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  left: 369px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 133px;
+  width: 60%;
+  text-align: left;
+}
+
+.news .hamilton-image {
+  height: 412px;
+  left: 45px;
+  position: relative;
+  top: 50px;
+  width: 266px;
+}
+
+/* Leclerc Section */
+
+.news .acerca-leclerc-title {
+  color: #FFFFFF;
+  font-family: "Onest-Bold", Helvetica;
+  font-size: 35px;
+  font-weight: 700;
+  left: 369px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  width: 352px;
+}
+
+.news .acerca-leclerc-text {
+  color: #FFFFFF;
+  font-family: "Onest-Regular", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  left: 369px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 80px;
+  width: 65%;
+  text-align: left;
+}
+
+.news .leclerc {
+  height: 526px;
+  left: 1220px;
+  position: absolute;
+  width: 311px;
+}
+
+.news .leclerc-image {
+  height: 412px;
+  left: 37px;
+  position: absolute;
+  top: -50px;
+  width: 274px;
+}
+
+/* TEAMS */
+
+.grid-teams {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: repeat(3, 1fr); 
+  gap: 0px; 
+  margin: 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.teams .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 185px;
+  width: 386px;
+  opacity: 0;
+  transition: .5s ease;
+  border-radius: 15px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-family: Tektur;
+  background-color: #c9dce2; /* Default background color */
+}
+
+.teams:hover .overlay {
+  opacity: 0.9;
+}
+
+/* .teams:hover .overlay.ferrari {
+  background-color: #000000;  // not working
+} */
+
+.background-teams{
+  background-color: #D4CBCA;
+  margin-bottom: 20%;
+}
+.grid-team {
+  padding: 3%;
+}
+
+.teams {
+  height: 185px;
+  width: 386px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* CIRCUITOS */
+
+.grid-tracks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0px; /* Adjust the gap between tracks as needed */
+  margin-top: 5%;
+  margin-left: 10%;
+  position: relative;
+  overflow: hidden;
+}
+
+.tracks .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 289px;
+  width: 263px;
+  opacity: 0;
+  transition: .5s ease;
+  border-radius: 15px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-family: Tektur;
+  background-color: #D4CBCA; 
+  text-decoration-color: #000
+}
+
+.tracks:hover .overlay {
+  opacity: 0.9;
+}
+
+.grid-track {
+}
+
+.tracks{
+  height: 289px;
+  width: 263px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 7%;
+}
+
+.tracks .track{
+  height: 289px;
+  width: 263px;
+  left: 0;
+  position: relative;
+  top: 0;
+}
+
+.background-circuitos{
+  background-color: #343535;
+}
+
+.background-historia{
+  background-color: #D4CBCA;
+}
+
+.historia p {
+  font-family: "Onest-Regular", Helvetica;
+  text-align: justify;
+  text-decoration-color: #000;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* ---------------------------------------------------------------------- */
+/* SERIES */
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* FOOTER */
 
 .footer {
   padding: 5%;
+  color: #FFF;
+  text-align: center;
+  font-size: 20px;
+  background-color: #343535;
 }
+
 </style> 
 
 
