@@ -404,7 +404,7 @@ body, html {
   margin: 0 auto;
 }
 
-// Navbar
+/* Navbar */ 
 .navbar {
   text-align: center;
   display: flex;
@@ -449,7 +449,7 @@ body, html {
   margin-right: 40px;
 }
 
-// 
+/*  */ 
 .background {
   position: absolute;
   width: 100%;
@@ -504,97 +504,94 @@ svg {
 }
 
 /* ACERCA */
-
 .background-acerca{
   background-color: #343535;
   
 }
 .news {
-  height: 526px;
+  height: 480px ;//100% n funciona
   position: relative;
-  width: 1247px;
+  width: 100%;
   margin-left: 10%;
   margin-right: 10%;
 }
 
-/* Hamilton Section */
+  /* Hamilton Section */
 
 .news .acerca-hamilton-title {
   color: #FFFFFF;
   font-family: "Onest-Bold", Helvetica;
   font-size: 35px;
   font-weight: 700;
-  left: 369px;
+  left: 20%;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 58px;
-  width: 307px;
+  top: 10%;
+
 }
 
 .news .acerca-hamilton-text {
   color: #FFFFFF;
   font-family: "Onest-Regular", Helvetica;
-  font-size: 25px;
+  font-size: 160%; //25px
   font-weight: 400;
-  left: 369px;
+  left: 20%;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 133px;
-  width: 60%;
+  top: 30%; //
+  width: 40%;
   text-align: left;
 }
 
 .news .hamilton-image {
-  height: 412px;
-  left: 45px;
+  //height: 412px;
+  height: 25rem;
+  left: 3%;
   position: relative;
-  top: 50px;
-  width: 266px;
+  top: 50%;
 }
 
-/* Leclerc Section */
+  /* Leclerc Section */
 
 .news .acerca-leclerc-title {
   color: #FFFFFF;
   font-family: "Onest-Bold", Helvetica;
   font-size: 35px;
   font-weight: 700;
-  left: 369px;
+  left: 20%;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  width: 352px;
 }
 
 .news .acerca-leclerc-text {
   color: #FFFFFF;
   font-family: "Onest-Regular", Helvetica;
-  font-size: 25px;
+  font-size: 160%; //25px
   font-weight: 400;
-  left: 369px;
+  left: 20%;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 80px;
-  width: 65%;
+  top: 8vh; //80px;
+  width: 40%;
   text-align: left;
 }
 
-.news .leclerc {
-  height: 526px;
-  left: 1220px;
+.news .leclerc { // Corrigir
+  height: 38rem;//526px;
+  left: 76rem;//1220px;
   position: absolute;
-  width: 311px;
+  width: 19rem;//311px;
 }
 
 .news .leclerc-image {
-  height: 412px;
-  left: 37px;
+  height: 25rem;
+  left:15%; //37px;
   position: absolute;
-  top: -50px;
-  width: 274px;
+  bottom: 27%;
 }
 
 /* TEAMS */
@@ -615,16 +612,16 @@ svg {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 185px;
-  width: 386px;
+  height: 100%; //185px
+  width: 100%; //386px
   opacity: 0;
   transition: .5s ease;
-  border-radius: 15px;
+  border-radius: 2vh; //15px;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 50px;
+  font-size: 350%;
   font-family: Tektur;
   background-color: #c9dce2; /* Default background color */
 }
@@ -645,11 +642,10 @@ svg {
   padding: 3%;
 }
 
-.teams {
-  height: 185px;
-  width: 386px;
+.teams { //ajustar
+  height: 96%; //186px
+  width: 96%; //386px
   position: relative;
-  overflow: hidden;
 }
 
 
@@ -672,16 +668,16 @@ svg {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 289px;
-  width: 263px;
+  height: 97%;//289px;
+  width:  61%;//263px;
   opacity: 0;
   transition: .5s ease;
-  border-radius: 15px;
+  border-radius: 2vh; //15px;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 200%;
   font-family: Tektur;
   background-color: #D4CBCA; 
   text-decoration-color: #000
@@ -695,19 +691,23 @@ svg {
 }
 
 .tracks{
-  height: 289px;
-  width: 263px;
+  /*height: 100%;
+  width: 100%; */
+  height: auto;
+  width: auto;
+ /*  height: 289px;
+  width: 263px; */
   position: relative;
   overflow: hidden;
   margin-bottom: 7%;
 }
 
-.tracks .track{
-  height: 289px;
+.tracks .track{ //nao altera nada
+ /*   height: 289px;
   width: 263px;
   left: 0;
   position: relative;
-  top: 0;
+  top: 0; */
 }
 
 .background-circuitos{
@@ -722,7 +722,7 @@ svg {
   font-family: "Onest-Regular", Helvetica;
   text-align: justify;
   text-decoration-color: #000;
-  font-size: 25px;
+  font-size: 156%;  //font-size: 25px;
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
@@ -737,7 +737,7 @@ svg {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 1000px; //
   position: relative;
   margin: auto;
 }
@@ -829,7 +829,7 @@ svg {
   padding: 5%;
   color: #FFF;
   text-align: center;
-  font-size: 20px;
+  font-size: 125%;
   background-color: #343535;
 }
 
