@@ -93,7 +93,7 @@ export default {
   background-image: url('../img/backFantasy.jpg');
   background-size: cover; /* ou 'contain' se você quiser que a imagem se ajuste dentro da div */
   background-repeat: no-repeat;
-  background-position: 0px -80px;
+  background-position: bottom center;
 }
 .div6 { grid-area: 1 / 1 / 3 / 5; }
 
