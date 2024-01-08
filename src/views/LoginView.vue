@@ -77,6 +77,12 @@ export default {
 </script>
 
 <style>
+
+.v-field.v-field--prepended {
+    --v-field-padding-start: 6px;
+    color: white;
+}
+
 html,body {
   overflow: hidden !important;
 }
