@@ -23,7 +23,7 @@
               <img :src="carByPilot(pilot.name)" alt="car">
             </div>
           </td>
-          <td class="thin">{{pilot.firstname }} <span class="bold">{{ pilot.name }}</span></td>
+          <td class="thin">{{ capitalize(pilot.firstname) }} <span class="bold">{{ capitalize(pilot.name) }}</span></td>
           <td v-if="position < 1">{{ tableData.time }}</td>
           <td v-else>+ {{ pilot.time }}</td>
           <td>
@@ -107,6 +107,10 @@ export default {
         }
       }
       return null;
+    },
+    capitalize(text) {
+      if (!text) return '';
+      return text.charAt(0).toUpperCase() + text.slice(1);
     },
   },
   components: {

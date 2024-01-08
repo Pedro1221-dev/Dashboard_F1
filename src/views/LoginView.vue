@@ -76,11 +76,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
 .v-field.v-field--prepended {
     --v-field-padding-start: 6px;
-    color: white;
+    color: white !important;
 }
 
 html,body {
