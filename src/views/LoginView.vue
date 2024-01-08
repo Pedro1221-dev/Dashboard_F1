@@ -1,11 +1,11 @@
 <template>
   <div style="display: flex; justify-content: flex-end;">
     <div style="flex: 1;">
-      <img src="../img/backgrounds/imageLogin.png" alt="Imagem" style="width: 100%; height: 100vh; object-fit: cover;">
+      <img src="../img/backgrounds/imageBK.jpg" alt="Imagem" style="width: 100%; height: 100vh; object-fit: cover;">
     </div>
     <v-form @submit.prevent = "login">
     <div style="flex: 1; max-width: 450px;">
-      <v-card class="mx-auto pa-12 pb-8" elevation="8" rounded="lg" style="height: 100vh;">
+      <v-card class="mx-auto pa-12 pb-8" elevation="8" style="height: 100vh;">
         <div class="text-h4 text-white mb-4">Acede à tua Conta</div>
 
         <v-text-field
@@ -39,14 +39,12 @@
         </v-btn>
 
         <v-card-text class="text-center">
-          <a
-            class="text-3white text-decoration-none"
-            href="#"
-            rel="noopener noreferrer"
-            target="_blank"
+          <router-link
+            to="/register"
+            class="text-white text-decoration-none"
           >
-            Não tens conta? <v-icon icon="mdi-chevron-right"></v-icon>
-          </a>
+           Não tens conta? <v-icon icon="mdi-chevron-right"></v-icon>
+          </router-link>
         </v-card-text>
       </v-card>
     </div>
@@ -80,7 +78,7 @@ export default {
 
 <style>
 html,body {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 .v-card {
   background-color: #242833 !important;

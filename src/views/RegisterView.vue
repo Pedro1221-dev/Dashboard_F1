@@ -2,7 +2,7 @@
   <div style="display: flex; justify-content: flex-end;">
 
     <div style="flex: 1; max-width: 450px;">
-      <v-card class="mx-auto pa-12 pb-8" elevation="8" rounded="lg" style="height: 100vh;">
+      <v-card class="mx-auto pa-12 pb-8" elevation="8" style="height: 100vh;">
         <div class="text-h4 text-white mb-4">Criar uma Conta</div>
         <v-form @sunmit.prevent = "register">
         <!-- Campos de texto para o registro -->
@@ -66,7 +66,7 @@
     </div>
 
     <div style="flex: 1;">
-      <img src="imageRegister.png" alt="Nova Imagem" style="width: 100%; height: 100vh; object-fit: cover;">
+      <img src="../img/backgrounds/imageBK.jpg" alt="Nova Imagem" style="width: 100%; height: 100vh; object-fit: cover;">
     </div>
   </div>
 </template>
