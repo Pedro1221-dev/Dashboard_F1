@@ -8,6 +8,7 @@ import LiveView from '../views/LiveView.vue'
 import PilotStatsView from '../views/PilotStatsView.vue'
 import RaceStatsView from '../views/RaceStatsView.vue'
 import ConstructorStatsView from '../views/ConstructorStatsView.vue'
+import PerfilView from '../views/PerfilView.vue'
 import { useUserStore } from "@/stores/user";
 
 const router = createRouter({
@@ -62,6 +63,12 @@ const router = createRouter({
       path: '/dashboard/constructorstats',
       name: 'constructorstats',
       component: ConstructorStatsView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/dashboard/perfil',
+      name: 'perfil',
+      component: PerfilView,
       meta: { requiresAuth: true },
     },
 

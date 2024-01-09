@@ -18,7 +18,7 @@
 
       <v-list>
         <v-list-item>
-          <v-btn size="small">Perfil</v-btn>
+          <v-btn size="small" @click="perfil">Perfil</v-btn>
         </v-list-item>
         <v-list-item>
           <v-btn size="small" @click="logout">Logout</v-btn>
@@ -31,7 +31,11 @@
                 <div class="div2" style="border: 1px solid white;"> CALENDARIO </div>
                 <div class="div3" style="border: 1px solid white;"> NOTICIAS </div>
                 <div class="div4" style="border: 1px solid white;"> CLASSIFICAÇAO </div>
-                <div class="div5" style="border: 1px solid white;"> FANTASY </div> 
+                <div class="div5" style="border: 1px solid white;">
+                  <img src="../img/components/fantasy/Piloto Fantasy.png" style="height: 100%;">
+                  <img src="../img/components/fantasy/logo fantasy 1.png" style="width: 40%;">
+                  <img src="../img/components/fantasy/Car Fantasy 2.png" style="position: relative;left: 10%;">
+                </div> 
                 <div class="div6" style="border: 1px solid white;"> STATS PILOTO FAVORITO </div>
             </div>
         </div>       
@@ -66,6 +70,9 @@ export default {
       this.store.logout();
       this.$router.push({ name: "home" });
     },
+    perfil() {
+      this.$router.push({ name: "perfil" });
+    },
     },
 };
 </script>
@@ -90,10 +97,13 @@ export default {
 .div4 { grid-area: 4 / 1 / 7 / 3; }
 .div5 {
   grid-area: 3 / 1 / 4 / 5;
-  background-image: url('../img/backFantasy.jpg');
+  background-image: url('../img/backgrounds/backFantasy.jpg');
   background-size: cover; /* ou 'contain' se você quiser que a imagem se ajuste dentro da div */
   background-repeat: no-repeat;
   background-position: bottom center;
+  display:flex;
+  align-items: center;
+  max-height: 100px;
 }
 .div6 { grid-area: 1 / 1 / 3 / 5; }
 

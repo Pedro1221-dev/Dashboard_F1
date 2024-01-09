@@ -113,4 +113,8 @@ html,body {
 .v-btn {
   background-color: #F83D49 !important;
 }
+
+a:hover {
+  text-decoration: underline !important;
+}
 </style>

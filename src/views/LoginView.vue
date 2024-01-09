@@ -41,7 +41,7 @@
         <v-card-text class="text-center">
           <router-link
             to="/register"
-            class="text-white text-decoration-none"
+            class="text-white"
           >
            Não tens conta? <v-icon icon="mdi-chevron-right"></v-icon>
           </router-link>
@@ -78,7 +78,7 @@ export default {
 
 <style scoped>
 
-.v-field.v-field--prepended {
+::v-deep .v-field.v-field--prepended {
     --v-field-padding-start: 6px;
     color: white !important;
 }
@@ -92,5 +92,9 @@ html,body {
 
 .v-btn {
   background-color: #F83D49 !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
 }
 </style>
