@@ -124,7 +124,7 @@ export default {
 };
 </script>
 
-<style>
+<style scopped>
 .v-table__wrapper {
   margin-bottom: 20px !important;
 }

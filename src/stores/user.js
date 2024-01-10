@@ -38,17 +38,21 @@ export const useUserStore = defineStore("user", {
         (user) => user.username == username && user.password == password
       );
       if (user) {
-        this.isUserAuthenticated = true;
-        this.user = user;
+        this.$patch({
+          isUserAuthenticated: true,
+          user: user
+        });
         console.log(this.isUserAuthenticated);
       } else {
         throw Error("User invalid!");
       }
     },
     logout() {
-      this.isUserAuthenticated = false;
-      this.user = null;
-    },
+      this.$patch({
+        isUserAuthenticated: false,
+        user: null
+      });
+    }
   },  
   persist: true,
 });

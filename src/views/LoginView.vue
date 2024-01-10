@@ -77,7 +77,9 @@ export default {
 </script>
 
 <style scoped>
-
+*{
+  max-height: 99vh;
+}
 ::v-deep .v-field.v-field--prepended {
     --v-field-padding-start: 6px;
     color: white !important;

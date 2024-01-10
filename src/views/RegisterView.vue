@@ -4,7 +4,7 @@
     <div style="flex: 1; max-width: 450px;">
       <v-card class="mx-auto pa-12 pb-8" elevation="8" style="height: 100vh;">
         <div class="text-h4 text-white mb-4">Criar uma Conta</div>
-        <v-form @sunmit.prevent = "register">
+        <v-form @submit.prevent = "register">
         <!-- Campos de texto para o registro -->
         <v-text-field
           v-model="firstName"
@@ -12,6 +12,7 @@
           placeholder="Primeiro Nome"
           prepend-inner-icon="mdi-account-outline"
           variant="outlined"
+          required
         ></v-text-field>
 
         <v-text-field
@@ -84,20 +85,28 @@ export default {
     };
   },
   methods: {
-  async register() {
-    try {
-      await this.store.register(this.first, this.last, this.username, this.password);
-      await this.store.login(this.username, this.password);
-      this.$router.push({ name: "home" }); // Redireciona para a página do dashboard após o login
-    } catch (error) {
-      alert(`Error: ${error.message}`);
-    }
-  },
+    async register() {
+  if (!this.first || !this.last || !this.username || !this.password) {
+    alert('Todos os campos são obrigatórios!');
+    return;
+  }
+
+  try {
+    await this.store.register(this.first, this.last, this.username, this.password);
+    await this.store.login(this.username, this.password);
+    this.$router.push({ name: "home" }); // Redireciona para a página do dashboard após o login
+  } catch (error) {
+    alert(`Error: ${error.message}`);
+  }
+},
   },
 };
 </script>
 
 <style scoped>
+*{
+  max-height: 99vh;
+}
 ::v-deep .v-field.v-field--prepended {
   --v-field-padding-start: 6px;
   color: white !important;

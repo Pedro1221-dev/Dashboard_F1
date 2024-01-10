@@ -54,4 +54,7 @@ export default {
 .sidenav a:hover {
   color: #f1f1f1;
 }
+.main{
+  background: url('../img/backgrounds/bck.png');
+}
 </style>
