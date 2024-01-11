@@ -55,7 +55,7 @@
                 <v-card-text>
                 <div class="avatars">
                     <img
-                    v-for="avatarNumber in 10"
+                    v-for="avatarNumber in 12"
                     :key="avatarNumber"
                     :src="`../src/img/avatars/${avatarNumber}.png`"
                     @click="selectAvatar(avatarNumber)"
@@ -87,6 +87,16 @@
         images: [
         '../src/img/avatars/1.png',
         '../src/img/avatars/2.png',
+        '../src/img/avatars/3.png',
+        '../src/img/avatars/4.png',
+        '../src/img/avatars/5.png',
+        '../src/img/avatars/6.png',
+        '../src/img/avatars/7.png',
+        '../src/img/avatars/8.png',
+        '../src/img/avatars/9.png',
+        '../src/img/avatars/10.png',
+        '../src/img/avatars/11.png',
+        '../src/img/avatars/12.png',
       ],
       selectedImage: '',
       old_password: '',

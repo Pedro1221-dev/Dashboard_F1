@@ -11,7 +11,14 @@ a,
   margin-left: 160px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 2rem;
-  max-height: 100vh
+  min-height: 99vh;
+  max-height: 100vh;
+  background: 
+  linear-gradient(
+    rgba(47, 48, 48, 0.64), 
+    rgba(47, 48, 48, 0.64)
+  ),
+  url('../img/backgrounds/bck.png');
 }
 
 @font-face {

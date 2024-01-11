@@ -15,6 +15,7 @@
           <h1>{{ selectedRace.circuitName }}</h1>
           <p>{{ selectedRace.Location.country }}</p>
           <p>{{ selectedRace.Location.locality }}</p>
+          <img :src="`../src/img/circuitos/${selectedRace.Location.country.toLowerCase()}.png`">
         </div>
       </div>
     </div>

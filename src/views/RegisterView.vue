@@ -66,10 +66,17 @@
       <img src="../img/backgrounds/imageBK.jpg" alt="Nova Imagem" style="width: 100%; height: 100vh; object-fit: cover;">
     </div>
   </div>
+  <AlertComponent
+    ref="alert"
+    message=""
+    type=""
+  />
 </template>
 
 <script>
 import { useUserStore } from "@/stores/user";
+import AlertComponent from '../components/AlertComponent.vue';
+
 export default {
   data() {
     return {
@@ -80,10 +87,13 @@ export default {
       password: "",
     };
   },
+  components: {
+    AlertComponent,
+  },
   methods: {
     async register() {
   if (!this.first || !this.last || !this.username || !this.password) {
-    alert('Todos os campos são obrigatórios!');
+    this.$refs.alert.showAlert('Todos os campos são obrigatórios!', 'error');
     return;
   }
 
@@ -92,7 +102,7 @@ export default {
     await this.store.login(this.username, this.password);
     this.$router.push({ name: "home" }); // Redireciona para a página do dashboard após o login
   } catch (error) {
-    alert(`Error: ${error.message}`);
+    this.$refs.alert.showAlert(error.message, 'error');
   }
 },
   },
