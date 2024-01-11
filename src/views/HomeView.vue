@@ -1,4 +1,5 @@
 <template>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <div class="grid-container">
     <div class="grid-item">
         <!-- SVG Background -->
@@ -39,7 +40,7 @@
            </div>
         </div>
 
-      <div class="image-container">
+      <div class="image-container" >
           <div class="image-shadow"></div>
           <img src="src/img/car.png" alt="" style="width: 1200px; height: auto; opacity: 0.80;">    
       </div>
@@ -52,10 +53,10 @@
             <br><b>Acerca</b><br>
           </div>
           <div class="grid-acerca">
-            <div class="grid-acerca-item">
-              <img class="hamilton-image" alt="Image" src="src\img\news\hamilton.png" />
+            <div class="grid-acerca-item" data-aos="fade-right">
+              <img class="hamilton-image" alt="Image" src="src\img\news\hamilton.png"  />
             </div>
-            <div class="grid-acerca-item">
+            <div class="grid-acerca-item" data-aos="fade-right">
               <div class="acerca-hamilton-title">Como Surgiu ?</div><br>
               <p class="acerca-hamilton-text">
                 O 'Formula 1 Pulse' surge como um projeto interdisciplinar inovador na universidade, unindo conhecimentos em ciência
@@ -66,7 +67,7 @@
             </div>
             <div class="grid-acerca-item"></div>
             <div class="grid-acerca-item"></div>
-            <div class="grid-acerca-item">
+            <div class="grid-acerca-item" data-aos="fade-left">
               <div class="acerca-leclerc-title">Para que Serve ?</div><br>
               <p class="acerca-leclerc-text">
                 'Formula 1 Pulse' é uma ferramenta essencial para entusiastas e profissionais do desporto automobilístico.
@@ -76,7 +77,7 @@
                 só lugar.
               </p>
             </div>
-            <div class="grid-acerca-item">
+            <div class="grid-acerca-item" data-aos="fade-left">
               <img class="leclerc-image" alt="Image" src="src\img\news\leclerc.png" />
             </div>
           </div>
@@ -91,84 +92,83 @@
            <b>Equipas</b>
         </div>
         <div class="grid-teams">
-          <div class="grid-team">
+          <div class="grid-team" data-aos="flip-left" data-aos-duration="2000">
             <div class="teams">
               <img class="mercedes" alt="Mercedes" src="src\img\teams\mercedes.png"/>
-              <div class="overlay">Mercedes</div>
+              <div class="team-overlay">Mercedes</div>
             </div>
           </div>
-          <div class="grid-team">
+          <div class="grid-team" data-aos="flip-left" data-aos-duration="2000"> 
             <div class="teams">
               <img class="ferrari" alt="Ferrari" src="src\img\teams\ferrari.png"/>
-              <div class="overlay">Ferrari</div>
+              <div class="team-overlay">Ferrari</div>
             </div>
           </div>
 
-          <div class="grid-team">
+          <div class="grid-team" data-aos="flip-left" data-aos-duration="2000">
             <div class="teams">
               <img class="redbull" alt="Red Bull" src="src\img\teams\redbull.png"/>
-              <div class="overlay">Red Bull</div>
+              <div class="team-overlay">Red Bull</div>
             </div>
           </div>
 
-          <div class="grid-team">
-            <div class="teams">
-              <img class="alfaromeo" alt="Alfa Romeo" src="src\img\teams\alfa romeo.png"/>
-              <div class="overlay">Alfa Romeo</div>
-            </div>
-          </div>
-
-          <div class="grid-team">
+          <div class="grid-team" data-aos="flip-left" data-aos-duration="2000">
             <div class="teams">
               <img class="mclaren" alt="McLaren" src="src\img\teams\mcLaren.png"/>
-              <div class="overlay">McLaren</div>
+              <div class="team-overlay">McLaren</div>
             </div>
           </div>
 
-          <div class="grid-team">
+          <div class="grid-team" data-aos="flip-left" data-aos-duration="2000">
             <div class="teams">
               <img class="astonmartin" alt="Aston Martin" src="src\img\teams\aston martin.png"/>
-              <div class="overlay">Aston Martin</div>
+              <div class="team-overlay">Aston Martin</div>
             </div>
           </div>
-          <div class="grid-team">
+
+          <div class="grid-team" data-aos="flip-left" data-aos-duration="2000">
+            <div class="teams">
+              <img class="alfaromeo" alt="Alfa Romeo" src="src\img\teams\alfa romeo.png"/>
+              <div class="team-overlay">Alfa Romeo</div>
+            </div>
+          </div>
+
+          <div class="grid-team" data-aos="flip-left" data-aos-duration="2000">
             <div class="teams">
               <img class="haas" alt="Haas" src="src\img\teams\haas.png"/>
-              <div class="overlay">Haas</div>
+              <div class="team-overlay">Haas</div>
             </div>
           </div>
 
-          <div class="grid-team">
-            <div class="teams">
-              <img class="alpine" alt="Alpine" src="src\img\teams\alpine.png"/>
-              <div class="overlay">Alpine</div>
-            </div>
-          </div>
-          
-          <div class="grid-team">
-            <div class="teams">
-              <img class="alphatauri" alt="Alpha Tauri" src="src\img\teams\alpha tauri.png"/>
-              <div class="overlay">Alpha Tauri</div>
-            </div>
-          </div>
-
-          <div class="grid-team">
-          </div>
-
-          <div class="grid-team">
+          <div class="grid-team" data-aos="flip-left" data-aos-duration="2000">
             <div class="teams">
               <img class="williams" alt="Williams" src="src\img\teams\williams.png"/>
-              <div class="overlay">Williams</div>
+              <div class="team-overlay">Williams</div>
             </div>
           </div> 
 
+          <div class="grid-team" data-aos="flip-left" data-aos-duration="2000">
+            <div class="teams">
+              <img class="alphatauri" alt="Alpha Tauri" src="src\img\teams\alpha tauri.png"/>
+              <div class="team-overlay">Alpha Tauri</div>
+            </div>
+          </div>
+
+          <div class="grid-team">
+          </div>
+
+          <div class="grid-team" data-aos="flip-left" data-aos-duration="2000">
+            <div class="teams">
+              <img class="alpine" alt="Alpine" src="src\img\teams\alpine.png"/>
+              <div class="team-overlay">Alpine</div>
+            </div>
+          </div>
+
           <div class="grid-team">
           </div> 
-
         </div>     
       </div>
     </div>
-
 
     <div class="grid-item">
       <div class="background-circuitos">
@@ -176,125 +176,120 @@
             <br><b>Circuitos</b>
         </div>
         <div class="grid-tracks">
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up">
             <img src="src\img\tracks\bahrain.png" alt="Bahrain" class="track">
-            <div class="overlay">Bahrain</div>
+            <div class="track-overlay">Bahrain</div>
           </div>
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up">
             <img src="src\img\tracks\Saudi Arabia.png" alt="Saudi Arabia" class="track">
-            <div class="overlay">Saudi Arabia</div>
+            <div class="track-overlay">Saudi Arabia</div>
           </div>
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up">
             <img src="src\img\tracks\Australia.png" alt="Australia" class="track">
-            <div class="overlay">Australia</div>
+            <div class="track-overlay">Australia</div>
           </div>
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up">
             <img src="src\img\tracks\Japan.png" alt="Japan" class="track">
-            <div class="overlay">Japan</div>
+            <div class="track-overlay">Japan</div>
           </div>
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="1000">
             <img src="src\img\tracks\China.png" alt="China" class="track">
-            <div class="overlay">China</div>
+            <div class="track-overlay">China</div>
           </div>
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="1000">
             <img src="src\img\tracks\USA1.png" alt="United States" class="track">
-            <div class="overlay">United States</div>
+            <div class="track-overlay">United States</div>
           </div>
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="1000">
             <img src="src\img\tracks\Italy1.png" alt="Italy" class="track">
-            <div class="overlay">Italy</div>
+            <div class="track-overlay">Italy</div>
           </div>
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="1000">
             <img src="src\img\tracks\Monaco.png" alt="Monaco" class="track">
-            <div class="overlay">Monaco</div>
+            <div class="track-overlay">Monaco</div>
 
           </div>
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="2000">
             <img src="src\img\tracks\Canada.png" alt="Canada" class="track">
-            <div class="overlay">Canada</div>
+            <div class="track-overlay">Canada</div>
 
           </div>
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="2000">
             <img src="src\img\tracks\Spain.png" alt="Spain" class="track">
-            <div class="overlay">Spain</div>
-
+            <div class="track-overlay">Spain</div>
           </div>
-          <div class="tracks">
+
+          <div class="tracks" data-aos="fade-up" data-aos-duration="2000">
             <img src="src\img\tracks\Austria.png" alt="Austria" class="track">
-            <div class="overlay">Austria</div>
-
+            <div class="track-overlay">Austria</div>
           </div>
-          <div class="tracks">
+
+          <div class="tracks" data-aos="fade-up" data-aos-duration="2000">
             <img src="src\img\tracks\UK.png" alt="United Kingdom" class="track">
-            <div class="overlay">United Kingdom</div>
-
+            <div class="track-overlay">United Kingdom</div>
           </div>
-          <div class="tracks">
+
+          <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Hungary.png" alt="Hungary" class="track">
-            <div class="overlay">Hungary</div>
-
+            <div class="track-overlay">Hungary</div>
           </div>
-          <div class="tracks">
+
+          <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Belgium.png" alt="Belgium" class="track">
-            <div class="overlay">Belgium</div>
-
+            <div class="track-overlay">Belgium</div>
           </div>
-          <div class="tracks">
+
+          <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Netherlands.png" alt="Netherlands" class="track">
-            <div class="overlay">Netherlands</div>
+            <div class="track-overlay">Netherlands</div>
 
           </div>
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Italy2.png" alt="Italy" class="track">
-            <div class="overlay">Italy</div>
-
+            <div class="track-overlay">Italy</div>
           </div>
 
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Azerbaijan.png" alt="Azerbaijan" class="track">
-            <div class="overlay">Azerbaijan</div>
-
+            <div class="track-overlay">Azerbaijan</div>
           </div>
 
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Singapore.png" alt="Singapore" class="track">
-            <div class="overlay">Singapore</div>
-
+            <div class="track-overlay">Singapore</div>
           </div>
 
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\USA2.png" alt="United States" class="track">
-            <div class="overlay">United States</div>
-
+            <div class="track-overlay">United States</div>
           </div>
 
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Mexico.png" alt="Mexico" class="track">
-            <div class="overlay">Mexico</div>
-
+            <div class="track-overlay">Mexico</div>
           </div>
 
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Brazil.png" alt="Brazil" class="track">
-            <div class="overlay">Brazil</div>
+            <div class="track-overlay">Brazil</div>
 
           </div>
 
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\USA3.png" alt="United States" class="track">
-            <div class="overlay">United States</div>
+            <div class="track-overlay">United States</div>
 
           </div>
         
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Qatar.png" alt="Qatar" class="track">
-            <div class="overlay">Qatar</div>
+            <div class="track-overlay">Qatar</div>
 
           </div>
 
-          <div class="tracks">
+          <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Abu Dhabi.png" alt="Abu Dhabi" class="track">
-            <div class="overlay">Abu Dhabi</div>
+            <div class="track-overlay">Abu Dhabi</div>
 
           </div>
         </div>
@@ -306,61 +301,101 @@
         <div id="historia" class="title">
           <br><b>História</b><br>
         </div>
-        <div id="historia" class="historia">
+        <div id="historia" class="historia" data-aos="fade-right">
           <p>A história da Fórmula 1 é uma emocionante saga que remonta ao pós-Segunda Guerra Mundial, quando o automobilismo de competição começou a se reerguer na Europa. A ideia de criar uma categoria de corridas com carros monopostos, equipados com motores de alta potência e aerodinâmica avançada, surgiu com o intuito de promover a excelência técnica e a competitividade entre fabricantes. A primeira temporada oficial da Fórmula 1 foi em 1950, com o Grande Prêmio da Grã-Bretanha realizando a corrida inaugural. Nessa época, equipes lendárias como a Ferrari e a Alfa Romeo competiam, e pilotos como Juan Manuel Fangio e Alberto Ascari começavam a escrever seus nomes na história do esporte. Desde então, a Fórmula 1 cresceu em popularidade, tornando-se uma das modalidades esportivas mais assistidas do mundo. Corridas lendárias, como o Grande Prêmio de Mônaco e o Grande Prêmio da Itália, tornaram-se marcos no calendário anual, com circuitos icônicos como Monza e Spa-Francorchamps testemunhando batalhas épicas.</p>
         </div>
       </div>
       </div>
+
+      <div class="grid-item">
+        <div class="background-series">
+
+
+          <linearGradient id="paint0_linear_335_992" x1="0" y1="456" x2="1920" y2="456" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F83D4A"/>
+            <stop offset="1" stop-color="#F8703A"/>
+          </linearGradient>
+
+          <div id="series" class="title" style="color: white !important;">
+            <br><b>Séries</b>
+          </div>
+          <div class="box-container">
+            <div class="box">
+              <div class="overlay"></div>
+            </div>
+            <div class="box">
+              <div class="overlay"></div>
+            </div>
+            <div class="box">
+              <div class="overlay"></div>
+            </div>
+            <div class="box">
+              <div class="overlay"></div>
+            </div>
+            <div class="box">
+              <div class="overlay"></div>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+
+      <div class="grid-item">
+        <footer class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                  <li><a href="#">about us</a></li>
+                  <li><a href="#">our services</a></li>
+                  <li><a href="#">privacy policy</a></li>
+                  <li><a href="#">affiliate program</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">shipping</a></li>
+                  <li><a href="#">returns</a></li>
+                  <li><a href="#">order status</a></li>
+                  <li><a href="#">payment options</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                  <li><a href="#">watch</a></li>
+                  <li><a href="#">bag</a></li>
+                  <li><a href="#">shoes</a></li>
+                  <li><a href="#">dress</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>      
+      </div>
+
   </div>
 
-     <div class="grid-item">
-        <div id="series" class="title">
-          <b>Séries</b>
-        </div>
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
-          <!-- Full-width images with number and caption text -->
-          <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="../img/car.png" style="width:100%">
-            <div class="text">Caption Text</div>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="src\img\car.png" style="width:100%">
-            <div class="text">Caption Two</div>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="src\img\car.png" style="width:100%">
-            <div class="text">Caption Three</div>
-          </div>
-
-        <!-- Next and previous buttons -->
-        <a class="prev" id="prevSlide">&#10094;</a>
-        <a class="next" id="nextSlide">&#10095;</a>
-        </div>
-        <br>
-
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-     </div>
-
-     <!-- Falta colocar o script para o carroussel funcionar, nao estava a conseguir -->
-
-  <div class="grid-item">
-      <div class="footer">FOOTER</div>
-  </div>
+   
 </template>
 
 <script>    
 import { useUserStore } from "@/stores/user";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { RouterLink } from 'vue-router';
 
 export default {
@@ -373,9 +408,66 @@ export default {
 
   mounted() {
     const store = useUserStore();
-    console.log(store.isUserAuthenticated);
+    AOS.init();
   },
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+  const boxes = document.querySelectorAll(".box");
+  let activeIndex = 1;
+  let isTransitioning = false;
+
+  function updateCurrentImg() {
+    isTransitioning = true;
+
+    boxes.forEach((box, index) => {
+      const isActive = index === activeIndex;
+      box.classList.toggle("expanded", isActive);
+      box.classList.toggle("closed", !isActive);
+    });
+
+    setTimeout(() => {
+      isTransitioning = false;
+    }, 500);
+  }
+
+  function handleArrowKey(event) {
+    if (isTransitioning) {
+      return;
+    }
+
+    if (event.key === "ArrowRight") {
+      activeIndex = (activeIndex + 1) % boxes.length;
+    } else if (event.key === "ArrowLeft") {
+      activeIndex = (activeIndex - 1 + boxes.length) % boxes.length;
+    }
+
+    updateCurrentImg();
+  }
+
+  function handleBoxClick(index) {
+    if (isTransitioning) {
+      return;
+    }
+
+    if (index === activeIndex && boxes[index].classList.contains("expanded")) {
+      boxes.forEach((box) => box.classList.remove("closed", "expanded"));
+      activeIndex = 0;
+    } else {
+      activeIndex = index;
+      updateCurrentImg();
+    }
+  }
+
+  document.addEventListener("keydown", handleArrowKey);
+
+  updateCurrentImg();
+
+  boxes.forEach((box, index) => {
+    box.addEventListener("click", () => handleBoxClick(index));
+  });
+});
+
 </script>
 
 <style lang="scss" scoped> 
@@ -433,7 +525,7 @@ body, html {
 }
 .navbar-title {
   color: #B81A10;
-  font-family: Tektur, bold;
+  font-family: "Tektur-ExtraBold";
   font-size: 60px;
   font-weight: 700;
   line-height: normal;
@@ -469,6 +561,15 @@ svg {
   position: relative; 
 }
 
+@keyframes slide {
+  0% {
+    transform: translateX(-130%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .image-shadow {
   position: absolute;
   width: 1300px;
@@ -487,9 +588,14 @@ svg {
   z-index: 1; 
 }
 
+.image-shadow, .image-container img{
+  animation: slide 2s linear; /* Ajuste a duração conforme necessário */
+  will-change: transform;
+}
+
 .title {
   color: #B81A10;
-  font-family: Tektur, bold;
+  font-family: "Tektur-Bold";
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
@@ -525,7 +631,7 @@ svg {
 .acerca-hamilton-title,
 .acerca-leclerc-title {
   color: #FFFFFF;
-  font-family: "Onest-Bold", Helvetica;
+  font-family: "Onest-Bold";
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0;
@@ -536,7 +642,7 @@ svg {
 
 .acerca-hamilton-text, .acerca-leclerc-text{
   color: #FFFFFF;
-  font-family: "Onest-Regular", Helvetica;
+  font-family: "Onest";
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0;
@@ -565,13 +671,13 @@ svg {
   overflow: hidden;
 }
 
-.teams .overlay {
+.teams .team-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 25vh; //185px
+  height: 96.4%;//25vh; //185px
   width: 100%; //386px 
   opacity: 0;
   transition: .5s ease;
@@ -585,7 +691,7 @@ svg {
   background-color: #c9dce2; /* Default background color */
 }
 
-.teams:hover .overlay {
+.teams:hover .team-overlay {
   opacity: 0.9;
   color: #343535;
 }
@@ -621,7 +727,7 @@ svg {
   overflow: hidden;
 }
 
-.tracks .overlay {
+.tracks .track-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -641,7 +747,7 @@ svg {
   background-color: #D4CBCA; 
 }
 
-.tracks:hover .overlay {
+.tracks:hover .track-overlay {
   opacity: 0.9;
   color: #000;
 }
@@ -669,7 +775,6 @@ svg {
   height: 100%;
 }
 
-
 /* História */
 .background-historia{
   background-color: #D4CBCA;
@@ -677,7 +782,7 @@ svg {
 }
 
 .historia p {
-  font-family: "Onest-Regular", Helvetica;
+  font-family: "Onest";
   text-align: justify;
   color: #000;
   font-size: 156%;  //font-size: 25px;
@@ -690,105 +795,180 @@ svg {
 
 /* ---------------------------------------------------------------------- */
 /* SERIES */
-
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px; //
-  position: relative;
-  margin: auto;
+.background-series {
+  height: 100%;
+  background: linear-gradient(to right, #F83D4A, #F8703A);
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
+$backgrounds: (
+  1: url(../img/series/Netflix-KV-horizontal.jpg),
+  2: url(../img/series/IMG_5244-scaled.jpeg),
+  3: url(../img/series/AAAABTmJ1PHpCCA5fSQrNQ4ktnoLERmUBephhozO32ajCsKYRZSTDJlalnYVp1luykvFnuVUrOV1ubrGwPnTZMJSpSdO-HOUIf3PrnpErVlfiC3WOmcoRp1-WIlHxgxKnQ-cleanup-jpg.webp),
+  4: url(../img/series/6e7d6151f04e3d739de6b74847049f1b.jpg),
+  5: url(../img/series/f1-drive-to-survive.jpeg),
+);
+
+@function get-background($index) {
+  @return map-get($backgrounds, $index);
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+.box-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
   width: 100%;
-  text-align: center;
+  max-width: 1400px;
+  height: 70vh;
+  max-height: 900px;
+  padding: 1rem;
+  margin: 0 auto;
+
+  .box {
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      background: get-background($i);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+    width: 25%;
+    height: 340px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: width 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+
+    .overlay {
+      opacity: 0;
+    }
+
+    &.closed {
+      width: 5%;
+      .overlay {
+        opacity: 1;
+      }
+    }
+
+    &.expanded {
+      width: 85%;
+    }
+  }
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
+.overlay {
   position: absolute;
   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
 
 
 /* ---------------------------------------------------------------------- */
 /* FOOTER */
 
-.footer {
-  padding: 5%;
-  color: #FFF;
-  text-align: center;
-  font-size: 125%;
-  background-color: #343535;
+body{
+  line-height: 1.5;
+  font-family: 'Onest', sans-serif;
 }
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+  background-color: #24262b; 
+  //  background-color: #343535;
+  padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
 
 </style> 
