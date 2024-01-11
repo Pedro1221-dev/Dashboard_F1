@@ -12,7 +12,7 @@
           class="profile-button"
         >
         {{ user}}
-            <img src="../img/avatars/1.png" alt="avatar" class="avatar">
+            <img :src="`../src/img/avatars/${store.user.avatarNumber}.png`" alt="avatar" class="avatar">
         </v-btn>
       </template>
 

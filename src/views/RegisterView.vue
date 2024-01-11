@@ -7,7 +7,7 @@
         <v-form @submit.prevent = "register">
         <!-- Campos de texto para o registro -->
         <v-text-field
-          v-model="firstName"
+          v-model="first"
           density="compact"
           placeholder="Primeiro Nome"
           prepend-inner-icon="mdi-account-outline"
@@ -16,7 +16,7 @@
         ></v-text-field>
 
         <v-text-field
-          v-model="lastName"
+          v-model="last"
           density="compact"
           placeholder="Último Nome"
           prepend-inner-icon="mdi-account-outline"

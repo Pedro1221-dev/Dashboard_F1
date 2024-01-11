@@ -13,23 +13,20 @@ export const useUserStore = defineStore("user", {
     isUser: (state) => state.isUserAuthenticated,
   },
   actions: {
-    register(first,last,username,password){
+    register(first,last,username,password,avatarNumber = 1){
           // Verifica se o usuário já existe
         const existingUser = this.users.find((user) => user.username === username);
         if (existingUser) {
           throw Error("Username already exists");
         }
 
-        // Cria um novo usuário
         const newUser = {
+          id: this.users.length + 1,
           username,
           password,
-          type: "regular", // Defina o tipo conforme necessário
-          firstName: first,
-          lastName: last,
+          avatarNumber,
         };
-
-        // Adiciona o novo usuário à lista
+      
         this.users.push(newUser);
         this.isUserAuthenticated = true;
     },
@@ -52,7 +49,25 @@ export const useUserStore = defineStore("user", {
         isUserAuthenticated: false,
         user: null
       });
-    }
+    },
+    updatePassword(userId, newPassword) {
+      const user = this.users.find(user => user.id === userId);
+    
+      if (user) {
+        user.password = newPassword;
+      } else {
+        console.error(`User with ID ${userId} not found.`);
+      }
+    },
+    updateAvatar(userId, newAvatarNumber) {
+      const user = this.users.find(user => user.id === userId);
+    
+      if (user) {
+        user.avatarNumber = newAvatarNumber;
+      } else {
+        console.error(`User with ID ${userId} not found.`);
+      }
+    },
   },  
   persist: true,
 });
