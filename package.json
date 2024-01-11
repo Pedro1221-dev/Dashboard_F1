@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "fast-xml-parser": "^4.3.2",
     "jsonp": "^0.2.1",
     "pinia": "^2.1.7",

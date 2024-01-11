@@ -16,28 +16,38 @@ a,
 
 @font-face {
   font-family: 'Tektur';
-  src: url('./fonts/Tektur.ttf') format('truetype');
+  src: url('../assets/fonts/Tektur-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Tektur-Bold';
+  src: url('../assets/fonts/Tektur-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Tektur-ExtraBold';
+  src: url('../assets/fonts/Tektur-ExtraBold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Onest';
-  src: url('./fonts/Onest.ttf') format('truetype');
+  src: url('../assets/fonts/Onest-Regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'Onest';
-  src: url('./fonts/Onest-Bold.ttf') format('truetype');
+  font-family: 'Onest-Bold';
+  src: url('../assets/fonts/Onest-Bold.ttf') format('truetype');
   font-weight: bold;
 }
 
 @font-face {
-  font-family: 'Onest';
-  src: url('./fonts/Onest-Light.ttf') format('truetype');
+  font-family: 'Onest-Light';
+  src: url('../assets/fonts/Onest-Light.ttf') format('truetype');
   font-weight: 300;
 }
 
 @font-face {
-  font-family: 'Onest';
-  src: url('./fonts/Onest-Thin.ttf') format('truetype');
+  font-family: 'Onest-Thin';
+  src: url('../assets/fonts/Onest-Thin.ttf') format('truetype');
   font-weight: 100;
 }
 
