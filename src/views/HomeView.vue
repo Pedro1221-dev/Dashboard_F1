@@ -45,49 +45,43 @@
       </div>
     </div>
 
-
     <div class="grid-item">
       <div class="background-acerca">
-      <div id="acerca" class="acerca">
-        <div id="acerca" class="title" >
-          <br><b>Acerca</b><br>
+        <div id="acerca" class="acerca">
+          <div id="acerca" class="title">
+            <br><b>Acerca</b><br>
+          </div>
+          <div class="grid-acerca">
+            <div class="grid-acerca-item">
+              <img class="hamilton-image" alt="Image" src="src\img\news\hamilton.png" />
+            </div>
+            <div class="grid-acerca-item">
+              <div class="acerca-hamilton-title">Como Surgiu ?</div><br>
+              <p class="acerca-hamilton-text">
+                O 'Formula 1 Pulse' surge como um projeto interdisciplinar inovador na universidade, unindo conhecimentos em ciência
+                da computação, design de interfaces e análise de dados. Esta dashboard dinâmica proporciona uma visão envolvente da
+                Fórmula 1, destacando estatísticas e informações relevantes de maneira visualmente atrativa, resultado da paixão e
+                dedicação de uma equipa diversificada.
+              </p>
+            </div>
+            <div class="grid-acerca-item"></div>
+            <div class="grid-acerca-item"></div>
+            <div class="grid-acerca-item">
+              <div class="acerca-leclerc-title">Para que Serve ?</div><br>
+              <p class="acerca-leclerc-text">
+                'Formula 1 Pulse' é uma ferramenta essencial para entusiastas e profissionais do desporto automobilístico.
+                Funcionando como uma dashboard abrangente, oferece acompanhamento em tempo real de estatísticas, resultados de
+                corridas e análises detalhadas, proporcionando uma perspetiva única sobre o desempenho das equipas e pilotos. Esta
+                plataforma representa uma fonte valiosa de insights e entretenimento, reunindo paixão, inovação e conhecimento num
+                só lugar.
+              </p>
+            </div>
+            <div class="grid-acerca-item">
+              <img class="leclerc-image" alt="Image" src="src\img\news\leclerc.png" />
+            </div>
+          </div>
         </div>
-        <div class="news-container">
-         <!-- Hamilton Section -->
-         <div class="news acerca-hamilton">
-            <div class="acerca-hamilton-title">Como Surgiu ?</div>
-            <p class="acerca-hamilton-text">
-               O 'Formula 1 Pulse' surge como um projeto interdisciplinar inovador na universidade, unindo conhecimentos em ciência
-               da computação, design de interfaces e análise de dados. Esta dashboard dinâmica proporciona uma visão envolvente da
-               Fórmula 1, destacando estatísticas e informações relevantes de maneira visualmente atrativa, resultado da paixão e
-               dedicação de uma equipa diversificada.
-            </p>
-            <div class="hamilton">
-               <div class="overlap-group">
-                  <img class="hamilton-image" alt="Image" src="src\img\news\hamilton.png" />
-               </div>
-            </div>
-         </div>
-         <!-- Leclerc Section -->
-         <div class="news acerca-leclerc">
-            <div class="acerca-leclerc-title">Para que Serve ?</div>
-            <p class="acerca-leclerc-text">
-               'Formula 1 Pulse' é uma ferramenta essencial para entusiastas e profissionais do desporto automobilístico.
-               Funcionando como uma dashboard abrangente, oferece acompanhamento em tempo real de estatísticas, resultados de
-               corridas e análises detalhadas, proporcionando uma perspetiva única sobre o desempenho das equipas e pilotos. Esta
-               plataforma representa uma fonte valiosa de insights e entretenimento, reunindo paixão, inovação e conhecimento num
-               só lugar.
-            </p>
-            <div class="leclerc">
-               <div class="overlap-group">
-                  <img class="leclerc-image" alt="Image" src="src\img\news\leclerc.png" />
-                  
-               </div>
-            </div>
-         </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="grid-item">
@@ -123,48 +117,55 @@
               <div class="overlay">Alfa Romeo</div>
             </div>
           </div>
+
           <div class="grid-team">
             <div class="teams">
               <img class="mclaren" alt="McLaren" src="src\img\teams\mcLaren.png"/>
               <div class="overlay">McLaren</div>
             </div>
           </div>
+
           <div class="grid-team">
             <div class="teams">
               <img class="astonmartin" alt="Aston Martin" src="src\img\teams\aston martin.png"/>
               <div class="overlay">Aston Martin</div>
-
             </div>
           </div>
           <div class="grid-team">
             <div class="teams">
               <img class="haas" alt="Haas" src="src\img\teams\haas.png"/>
               <div class="overlay">Haas</div>
-
             </div>
           </div>
+
           <div class="grid-team">
             <div class="teams">
               <img class="alpine" alt="Alpine" src="src\img\teams\alpine.png"/>
               <div class="overlay">Alpine</div>
-
             </div>
           </div>
-          <div class="grid-team">
-          </div>
+          
           <div class="grid-team">
             <div class="teams">
               <img class="alphatauri" alt="Alpha Tauri" src="src\img\teams\alpha tauri.png"/>
               <div class="overlay">Alpha Tauri</div>
             </div>
           </div>
+
+          <div class="grid-team">
+          </div>
+
           <div class="grid-team">
             <div class="teams">
               <img class="williams" alt="Williams" src="src\img\teams\williams.png"/>
               <div class="overlay">Williams</div>
             </div>
-          </div>       
-        </div>       
+          </div> 
+
+          <div class="grid-team">
+          </div> 
+
+        </div>     
       </div>
     </div>
 
@@ -301,22 +302,16 @@
     </div>
 
     <div class="grid-item">
-      <div class="background-historia"></div>
+      <div class="background-historia">
         <div id="historia" class="title">
           <br><b>História</b><br>
         </div>
         <div id="historia" class="historia">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, in sunt? Dolores est facere maiores similique nulla magni nam reprehenderit, 
-            illo saepe aspernatur molestiae. A assumenda sit incidunt sequi corrupti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, in sunt? Dolores est facere maiores similique nulla magni nam reprehenderit, 
-            illo saepe aspernatur molestiae. A assumenda sit incidunt sequi corrupti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, in sunt? Dolores est facere maiores similique nulla magni nam reprehenderit, 
-            illo saepe aspernatur molestiae. A assumenda sit incidunt sequi corrupti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, in sunt? Dolores est facere maiores similique nulla magni nam reprehenderit, 
-            illo saepe aspernatur molestiae. A assumenda sit incidunt sequi corrupti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, in sunt? Dolores est facere maiores similique nulla magni nam reprehenderit, 
-            illo saepe aspernatur molestiae. A assumenda sit incidunt sequi corrupti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, in sunt? Dolores est facere maiores similique nulla magni nam reprehenderit, 
-            illo saepe aspernatur molestiae. A assumenda sit incidunt sequi corrupti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, in sunt? Dolores est facere maiores similique nulla magni nam reprehenderit, 
-            illo saepe aspernatur molestiae. A assumenda sit incidunt sequi corrupti?</p>
+          <p>A história da Fórmula 1 é uma emocionante saga que remonta ao pós-Segunda Guerra Mundial, quando o automobilismo de competição começou a se reerguer na Europa. A ideia de criar uma categoria de corridas com carros monopostos, equipados com motores de alta potência e aerodinâmica avançada, surgiu com o intuito de promover a excelência técnica e a competitividade entre fabricantes. A primeira temporada oficial da Fórmula 1 foi em 1950, com o Grande Prêmio da Grã-Bretanha realizando a corrida inaugural. Nessa época, equipes lendárias como a Ferrari e a Alfa Romeo competiam, e pilotos como Juan Manuel Fangio e Alberto Ascari começavam a escrever seus nomes na história do esporte. Desde então, a Fórmula 1 cresceu em popularidade, tornando-se uma das modalidades esportivas mais assistidas do mundo. Corridas lendárias, como o Grande Prêmio de Mônaco e o Grande Prêmio da Itália, tornaram-se marcos no calendário anual, com circuitos icônicos como Monza e Spa-Francorchamps testemunhando batalhas épicas.</p>
         </div>
       </div>
-    </div>
+      </div>
+  </div>
 
      <div class="grid-item">
         <div id="series" class="title">
@@ -327,7 +322,7 @@
           <!-- Full-width images with number and caption text -->
           <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="src\img\car.png" style="width:100%">
+            <img src="../img/car.png" style="width:100%">
             <div class="text">Caption Text</div>
           </div>
 
@@ -393,9 +388,7 @@ body, html {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
-  //grid-template-rows: repeat(6, 100vh); /* Each row takes up the full viewport height */
-  grid-template-rows: 100vh 130vh 110vh 240vh 1vh 100vh;
-  // overflow: hidden;
+  grid-template-rows: 100vh 160vh 170vh 300vh 100vh 100vh;
 }
 
 .title b {
@@ -449,7 +442,7 @@ body, html {
   margin-right: 40px;
 }
 
-/*  */ 
+/* Home */ 
 .background {
   position: absolute;
   width: 100%;
@@ -503,105 +496,71 @@ svg {
   line-height: normal;
 }
 
-/* ACERCA */
+/* Acerca */
 .background-acerca{
   background-color: #343535;
+  height: 100%;
   
 }
 .news {
-  height: 480px ;//100% n funciona
   position: relative;
   width: 100%;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
-  /* Hamilton Section */
+.grid-acerca {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: 50vh 80vh 50vh;
+  grid-template-rows: 50vh 50vh;
+  width: 100%;
+  grid-row-gap: 100px;
+}
 
-.news .acerca-hamilton-title {
+.grid-acerca-item {
+  padding: 20px;
+  text-align: center;
+}
+
+.acerca-hamilton-title,
+.acerca-leclerc-title {
   color: #FFFFFF;
   font-family: "Onest-Bold", Helvetica;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 700;
-  left: 20%;
   letter-spacing: 0;
   line-height: normal;
-  position: absolute;
-  top: 10%;
-
-}
-
-.news .acerca-hamilton-text {
-  color: #FFFFFF;
-  font-family: "Onest-Regular", Helvetica;
-  font-size: 160%; //25px
-  font-weight: 400;
-  left: 20%;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 30%; //
-  width: 40%;
+  position: relative;
   text-align: left;
 }
 
-.news .hamilton-image {
-  //height: 412px;
+.acerca-hamilton-text, .acerca-leclerc-text{
+  color: #FFFFFF;
+  font-family: "Onest-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: left;
+}
+
+.hamilton-image, .leclerc-image{
   height: 25rem;
   left: 3%;
   position: relative;
-  top: 50%;
 }
 
-  /* Leclerc Section */
-
-.news .acerca-leclerc-title {
-  color: #FFFFFF;
-  font-family: "Onest-Bold", Helvetica;
-  font-size: 35px;
-  font-weight: 700;
-  left: 20%;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-}
-
-.news .acerca-leclerc-text {
-  color: #FFFFFF;
-  font-family: "Onest-Regular", Helvetica;
-  font-size: 160%; //25px
-  font-weight: 400;
-  left: 20%;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 8vh; //80px;
-  width: 40%;
-  text-align: left;
-}
-
-.news .leclerc { // Corrigir
-  height: 38rem;//526px;
-  left: 76rem;//1220px;
-  position: absolute;
-  width: 19rem;//311px;
-}
-
-.news .leclerc-image {
-  height: 25rem;
-  left:15%; //37px;
-  position: absolute;
-  bottom: 27%;
-}
-
-/* TEAMS */
+/* Teams */
 
 .grid-teams {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  grid-template-rows: repeat(3, 1fr); 
-  gap: 0px; 
-  margin: 5%;
+  place-items: center;
+  grid-template-columns: repeat(3, 28vw); 
+  grid-template-rows: repeat(4, 1fr); 
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  gap: 15px;
   position: relative;
   overflow: hidden;
 }
@@ -612,11 +571,11 @@ svg {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%; //185px
-  width: 100%; //386px
+  height: 25vh; //185px
+  width: 100%; //386px 
   opacity: 0;
   transition: .5s ease;
-  border-radius: 2vh; //15px;
+  border-radius: 19px;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -628,6 +587,7 @@ svg {
 
 .teams:hover .overlay {
   opacity: 0.9;
+  color: #343535;
 }
 
 /* .teams:hover .overlay.ferrari {
@@ -636,28 +596,27 @@ svg {
 
 .background-teams{
   background-color: #D4CBCA;
-  margin-bottom: 20%;
-}
-.grid-team {
-  padding: 3%;
+  height: 100%;
 }
 
-.teams { //ajustar
+.teams { 
   height: 96%; //186px
-  width: 96%; //386px
+  width: 100%; //386px
   position: relative;
-}
+} 
 
 
-/* CIRCUITOS */
+/* Circuitos */
 
 .grid-tracks {
   display: grid;
+  place-items: center;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
   gap: 0px; /* Adjust the gap between tracks as needed */
   margin-top: 5%;
   margin-left: 10%;
+  margin-right: 10%;
   position: relative;
   overflow: hidden;
 }
@@ -668,11 +627,11 @@ svg {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 97%;//289px;
-  width:  61%;//263px;
+  height: 98%;//289px;
+  width:  100%;//263px;
   opacity: 0;
   transition: .5s ease;
-  border-radius: 2vh; //15px;
+  border-radius: 3vh; //15px;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -680,19 +639,14 @@ svg {
   font-size: 200%;
   font-family: Tektur;
   background-color: #D4CBCA; 
-  text-decoration-color: #000
 }
 
 .tracks:hover .overlay {
   opacity: 0.9;
-}
-
-.grid-track {
+  color: #000;
 }
 
 .tracks{
-  /*height: 100%;
-  width: 100%; */
   height: auto;
   width: auto;
  /*  height: 289px;
@@ -712,16 +666,20 @@ svg {
 
 .background-circuitos{
   background-color: #343535;
+  height: 100%;
 }
 
+
+/* História */
 .background-historia{
   background-color: #D4CBCA;
+  height: 100%;
 }
 
 .historia p {
   font-family: "Onest-Regular", Helvetica;
   text-align: justify;
-  text-decoration-color: #000;
+  color: #000;
   font-size: 156%;  //font-size: 25px;
   font-weight: 400;
   letter-spacing: 0;
@@ -834,5 +792,3 @@ svg {
 }
 
 </style> 
-
-
