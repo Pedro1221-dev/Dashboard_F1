@@ -12,7 +12,6 @@
           v-model="username"
           density="compact"
           placeholder="Username"
-          prepend-inner-icon="mdi-email-outline"
           variant="outlined"
         ></v-text-field>
 
@@ -22,7 +21,6 @@
           :type="visible ? 'text' : 'password'"
           density="compact"
           placeholder="Password"
-          prepend-inner-icon="mdi-lock-outline"
           variant="outlined"
           @click:append-inner="visible = !visible"
         ></v-text-field>
@@ -43,17 +41,23 @@
             to="/register"
             class="text-white"
           >
-           Não tens conta? <v-icon icon="mdi-chevron-right"></v-icon>
+           Não tens conta?
           </router-link>
         </v-card-text>
       </v-card>
     </div>
   </v-form>
+  <AlertComponent
+    ref="alert"
+    message=""
+    type=""
+  />
   </div>
 </template>
 
 <script>
 import { useUserStore } from "@/stores/user";
+import AlertComponent from '../components/AlertComponent.vue';
 export default {
   data() {
     return {
@@ -62,6 +66,10 @@ export default {
       password: "",
       visible: false // Adicionando o estado para controlar a visibilidade da senha
     };
+    
+  },
+  components: {
+    AlertComponent,
   },
   methods: {
     login() {
@@ -69,7 +77,7 @@ export default {
         this.store.login(this.username, this.password)
         this.$router.push({ name: "dashboard" });
       } catch (error) {
-         alert(`Error: ${error.message}`); 
+         this.$refs.alert.showAlert(error.message, 'error');
       }
     },
   },
@@ -79,10 +87,6 @@ export default {
 <style scoped>
 *{
   max-height: 99vh;
-}
-::v-deep .v-field.v-field--prepended {
-    --v-field-padding-start: 6px;
-    color: white !important;
 }
 
 html,body {
@@ -98,5 +102,10 @@ html,body {
 
 a:hover {
   text-decoration: underline !important;
+}
+
+::v-deep .v-input--density-compact .v-field--variant-outlined {
+    --v-field-padding-bottom: 8px;
+    color: white !important;
 }
 </style>

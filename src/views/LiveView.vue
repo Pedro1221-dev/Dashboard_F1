@@ -69,14 +69,22 @@ export default {
         "alpine f1 team": "rgba(15, 28, 44, 1)",
       },
       imgCar: null,
+      intervalId: null,
     };
   },
   created() {
-    setInterval(this.updateTable, 5000);
+    if (sessionStorage.getItem('finishedRace') === 'true') {
+      this.tableData.distance = 100;
+      this.currentIndex = 10
+      this.updateTable();
+    } else {
+      this.intervalId = setInterval(this.updateTable, 1000);
+    }
   },
   methods: {
     updateTable() {
       if (this.tableData.distance === 100) {
+        clearInterval(this.intervalId);
         return;
       }
 
@@ -119,6 +127,13 @@ export default {
   computed: {
     tableData() {
       return this.getCurrentMock();
+    },
+  },
+  watch: {
+    'tableData.distance'(newDistance) {
+      if (newDistance === 100) {
+        sessionStorage.setItem('finishedRace', 'true');
+      }
     },
   },
 };

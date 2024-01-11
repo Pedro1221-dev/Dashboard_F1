@@ -27,7 +27,22 @@
     </v-menu>
             </div>
             <div class="parent">
-                <div class="div1">NOTIFICAÇOES </div>
+                <div class="div1">NOTIFICAÇOES 
+                  <v-alert v-if="raceFinished"
+                          color="#D9D9D9"
+                          theme="dark"
+                          density="compact"
+                          closable
+                          :style="{ fontSize: '15px', width: '350px', margin: '10px', 'margin-left': '25px' }"
+                  >
+                    <div style="display: flex; align-items: center;">
+                      <div style="display: inline-flex; border-radius: 50%; background: #BCBCBC; padding: 10px; align-items: center; justify-content: center; margin-right: 10px;">
+                        <v-icon>mdi-flag-checkered</v-icon>
+                      </div>
+                      <span>A corrida ao vivo terminou!</span>
+                    </div>
+                  </v-alert>
+                </div>
                 <RouterLink :to="{ name: 'calendar' }" class="div2">
                   <div class="calendar-grid">
                     <div class="day" v-for="day in 31" :key="day">{{ day }}</div>
@@ -70,6 +85,9 @@ export default {
     computed: {
         user() {
         return this.store.getUser.username;
+        },
+        raceFinished() {
+          return sessionStorage.getItem('finishedRace') === 'true';
         },
     },
 
@@ -210,4 +228,6 @@ border-radius:10px
   linear-gradient(rgba(47, 48, 48, 0.64),rgba(47, 48, 48, 0.64)),
   url('../img/backgrounds/bck.png');
 }
+
+
 </style>

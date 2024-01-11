@@ -51,12 +51,19 @@ export const useUserStore = defineStore("user", {
       });
     },
     updatePassword(userId, newPassword) {
-      const user = this.users.find(user => user.id === userId);
+      const userInUsers = this.users.find(user => user.id === userId);
+      const userInUser = this.user && this.user.id === userId ? this.user : null;
     
-      if (user) {
-        user.password = newPassword;
+      if (userInUsers) {
+        userInUsers.password = newPassword;
       } else {
-        console.error(`User with ID ${userId} not found.`);
+        console.error(`User with ID ${userId} not found in users.`);
+      }
+    
+      if (userInUser) {
+        userInUser.password = newPassword;
+      } else {
+        console.error(`User with ID ${userId} not found in user.`);
       }
     },
     updateAvatar(userId, newAvatarNumber) {

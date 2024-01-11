@@ -10,7 +10,6 @@
           v-model="first"
           density="compact"
           placeholder="Primeiro Nome"
-          prepend-inner-icon="mdi-account-outline"
           variant="outlined"
           required
         ></v-text-field>
@@ -19,7 +18,6 @@
           v-model="last"
           density="compact"
           placeholder="Último Nome"
-          prepend-inner-icon="mdi-account-outline"
           variant="outlined"
         ></v-text-field>
 
@@ -27,7 +25,6 @@
           v-model="username"
           density="compact"
           placeholder="Nome de Utilizador"
-          prepend-inner-icon="mdi-email-outline"
           variant="outlined"
         ></v-text-field>
 
@@ -37,7 +34,6 @@
           :type="visible ? 'text' : 'password'"
           density="compact"
           placeholder="Password"
-          prepend-inner-icon="mdi-lock-outline"
           variant="outlined"
           @click:append-inner="visible = !visible"
         ></v-text-field>
@@ -60,7 +56,7 @@
             to="/login"
             class="text-white text-decoration-none"
           >
-            Já tens uma conta? <v-icon icon="mdi-chevron-right"></v-icon>
+            Já tens uma conta?
           </router-link>
         </v-card-text>
       </v-card>
@@ -107,9 +103,9 @@ export default {
 *{
   max-height: 99vh;
 }
-::v-deep .v-field.v-field--prepended {
-  --v-field-padding-start: 6px;
-  color: white !important;
+::v-deep .v-input--density-compact .v-field--variant-outlined {
+    --v-field-padding-bottom: 8px;
+    color: white !important;
 }
 
 html,body {

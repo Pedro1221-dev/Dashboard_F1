@@ -65,14 +65,11 @@
             </v-card>
         </v-dialog>
 
-        <v-alert
-    v-model="showAlert"
-    :color="alertType"
-    dismissible
-    class="position-fixed alert-top-right"
-  >
-    {{ alertMessage }}
-  </v-alert>
+        <AlertComponent
+            ref="alert"
+            message=""
+            type=""
+        />
 
     </div>
   </template>
@@ -80,6 +77,7 @@
   <script>
   import { useUserStore } from "@/stores/user";
   import Sidenav from "../components/sidenav.vue";
+  import AlertComponent from '../components/AlertComponent.vue';
   
   export default {
     data() {
@@ -93,9 +91,6 @@
       selectedImage: '',
       old_password: '',
       new_password: '',
-      showAlert: false,
-      alertMessage: '',
-      alertType: 'success',
       };
     },
   
@@ -107,6 +102,7 @@
   
     components: {
       Sidenav,
+      AlertComponent,
     },
     methods: {
         selectImage(image) {
@@ -119,16 +115,14 @@
         },
         submitForm() {
             if (this.old_password !== this.store.user.password) {
-                this.alertMessage='A senha antiga está incorreta!';
-                this.alertType = 'error';
-                this.showAlert = true;
+                this.$refs.alert.showAlert('Senha Atual Errada!', 'error');
                 return;
             }
 
             this.store.updatePassword(this.store.user.id, this.new_password);
-            this.alertMessage='Senha atualizada com sucesso!';
-            this.alertType = 'success';
-            this.showAlert = true;
+            this.$refs.alert.showAlert('Senha atualizada com sucesso!', 'success');
+            this.old_password = "";
+            this.new_password = "";
             },
         },
   }
@@ -214,11 +208,4 @@
     grid-area: input-new-password;
   }
 
-  .alert-top-right {
-  top: 0;
-  right: 0;
-  width: auto;
-  max-width: 300px;
-  z-index: 2000;
-}
   </style>
