@@ -205,90 +205,70 @@
           <div class="tracks" data-aos="fade-up" data-aos-duration="1000">
             <img src="src\img\tracks\Monaco.png" alt="Monaco" class="track">
             <div class="track-overlay">Monaco</div>
-
           </div>
           <div class="tracks" data-aos="fade-up" data-aos-duration="2000">
             <img src="src\img\tracks\Canada.png" alt="Canada" class="track">
             <div class="track-overlay">Canada</div>
-
           </div>
           <div class="tracks" data-aos="fade-up" data-aos-duration="2000">
             <img src="src\img\tracks\Spain.png" alt="Spain" class="track">
             <div class="track-overlay">Spain</div>
           </div>
-
           <div class="tracks" data-aos="fade-up" data-aos-duration="2000">
             <img src="src\img\tracks\Austria.png" alt="Austria" class="track">
             <div class="track-overlay">Austria</div>
           </div>
-
           <div class="tracks" data-aos="fade-up" data-aos-duration="2000">
             <img src="src\img\tracks\UK.png" alt="United Kingdom" class="track">
             <div class="track-overlay">United Kingdom</div>
           </div>
-
           <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Hungary.png" alt="Hungary" class="track">
             <div class="track-overlay">Hungary</div>
           </div>
-
           <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Belgium.png" alt="Belgium" class="track">
             <div class="track-overlay">Belgium</div>
           </div>
-
           <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Netherlands.png" alt="Netherlands" class="track">
             <div class="track-overlay">Netherlands</div>
-
           </div>
           <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Italy2.png" alt="Italy" class="track">
             <div class="track-overlay">Italy</div>
           </div>
-
           <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Azerbaijan.png" alt="Azerbaijan" class="track">
             <div class="track-overlay">Azerbaijan</div>
           </div>
-
           <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Singapore.png" alt="Singapore" class="track">
             <div class="track-overlay">Singapore</div>
           </div>
-
           <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\USA2.png" alt="United States" class="track">
             <div class="track-overlay">United States</div>
           </div>
-
           <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Mexico.png" alt="Mexico" class="track">
             <div class="track-overlay">Mexico</div>
           </div>
-
           <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Brazil.png" alt="Brazil" class="track">
             <div class="track-overlay">Brazil</div>
-
           </div>
-
           <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\USA3.png" alt="United States" class="track">
             <div class="track-overlay">United States</div>
-
           </div>
-        
           <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Qatar.png" alt="Qatar" class="track">
             <div class="track-overlay">Qatar</div>
-
           </div>
-
           <div class="tracks" data-aos="fade-up" data-aos-duration="3000">
             <img src="src\img\tracks\Abu Dhabi.png" alt="Abu Dhabi" class="track">
             <div class="track-overlay">Abu Dhabi</div>
-
           </div>
         </div>
       </div>
