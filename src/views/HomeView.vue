@@ -15,7 +15,6 @@
            </svg>
         </div>
 
-
         <div class="grid-navbar">
           <div class="grid-link"></div>
           <div class="grid-link"><a href="#home">Home</a></div>
@@ -25,6 +24,7 @@
           <div class="grid-link"><a href="#circuitos">Circuitos</a></div>
           <div class="grid-link"><a href="#historia">História</a></div>
           <div class="grid-link"><a href="#series">Series</a></div>
+
           <div class="grid-link, navbar-icon" id="loginIcon">
               <RouterLink v-if="!store.isUserAuthenticated" :to="{ name: 'login' }" class="login-link">
                   <img src="src/img/icons/login.png" alt="Login">
@@ -40,7 +40,7 @@
 
       <div class="image-container" >
           <div class="image-shadow"></div>
-          <img src="src/img/car.png" alt="" style="width: 1200px; height: auto; opacity: 0.80;">    
+          <img src="src/img/car.png" alt="" style="width: 75rem; height: auto; opacity: 0.80;">    
       </div>
     </div>
 
