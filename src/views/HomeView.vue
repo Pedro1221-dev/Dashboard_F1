@@ -616,7 +616,7 @@ svg {
 }
 
 .image-shadow, .image-container img{
-  animation: slide 2s linear; /* Ajuste a duração conforme necessário */
+  animation: slide 1s linear; /* Ajuste a duração conforme necessário */
   will-change: transform;
 }
 
