@@ -287,8 +287,6 @@
 
       <div class="grid-item">
         <div class="background-series">
-
-
           <linearGradient id="paint0_linear_335_992" x1="0" y1="456" x2="1920" y2="456" gradientUnits="userSpaceOnUse">
             <stop stop-color="#F83D4A"/>
             <stop offset="1" stop-color="#F8703A"/>
@@ -314,9 +312,7 @@
               <div class="overlay"></div>
             </div>
           </div>
-
         </div>
-        
       </div>
 
       <div class="grid-item">
@@ -366,7 +362,6 @@
 
   </div>
 
-   
 </template>
 
 <script>    
