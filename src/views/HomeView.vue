@@ -14,28 +14,26 @@
               </defs>
            </svg>
         </div>
-        <div class="navbar">
-           <div class="navbar-left">
-              <a href="#home">Home</a>
-              <a href="#acerca">Acerca</a>
-              <a href="#equipas">Equipas</a>      
-          </div>
-           <div class="navbar-title">
-              <b>Formula1Pulse</b>
-           </div>
-           <div class="navbar-right">
-              <a href="#circuitos">Circuitos</a>
-              <a href="#historia">História</a>
-              <a href="#series">Series</a>
-           </div>
-           <div class="navbar-icon">
+
+
+        <div class="grid-navbar">
+          <div class="grid-link"></div>
+          <div class="grid-link"><a href="#home">Home</a></div>
+          <div class="grid-link"><a href="#acerca">Acerca</a></div>
+          <div class="grid-link"><a href="#equipas">Equipas</a>  </div>
+          <div class="grid-link , navbar-title">Formula1Pulse</div>
+          <div class="grid-link"><a href="#circuitos">Circuitos</a></div>
+          <div class="grid-link"><a href="#historia">História</a></div>
+          <div class="grid-link"><a href="#series">Series</a></div>
+          <div class="grid-link, navbar-icon" id="loginIcon">
               <RouterLink v-if="!store.isUserAuthenticated" :to="{ name: 'login' }" class="login-link">
                   <img src="src/img/icons/login.png" alt="Login">
+                  <span class="tooltip">Login</span>
               </RouterLink>
 
-              <!-- Show dashboard link only if user is authenticated -->
               <RouterLink v-else :to="{ name: 'dashboard' }" class="dashboard-link">  
                 <img src="src/img/icons/dashboard.png" alt="Dashboard">
+                <span class="tooltip">Dashboard</span>
               </RouterLink>
            </div>
         </div>
@@ -348,29 +346,28 @@
               <div class="footer-col">
                 <h4>company</h4>
                 <ul>
+                  <li><a href="#">FAQ</a></li>
                   <li><a href="#">about us</a></li>
                   <li><a href="#">our services</a></li>
                   <li><a href="#">privacy policy</a></li>
-                  <li><a href="#">affiliate program</a></li>
                 </ul>
               </div>
               <div class="footer-col">
-                <h4>get help</h4>
+                <h4>latest news</h4>
                 <ul>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">shipping</a></li>
-                  <li><a href="#">returns</a></li>
-                  <li><a href="#">order status</a></li>
-                  <li><a href="#">payment options</a></li>
+                  <li><a href="#">what is f1?</a></li>
+                  <li><a href="#">drivers</a></li>
+                  <li><a href="#">teams</a></li>
+                  <li><a href="#">schedule</a></li>
                 </ul>
               </div>
               <div class="footer-col">
-                <h4>online shop</h4>
+                <h4>results</h4>
                 <ul>
-                  <li><a href="#">watch</a></li>
-                  <li><a href="#">bag</a></li>
-                  <li><a href="#">shoes</a></li>
-                  <li><a href="#">dress</a></li>
+                  <li><a href="#">2023 season</a></li>
+                  <li><a href="#">driver standings</a></li>
+                  <li><a href="#">constructor standings</a></li>
+                  <li><a href="#">archive</a></li>
                 </ul>
               </div>
               <div class="footer-col">
@@ -396,7 +393,6 @@
 import { useUserStore } from "@/stores/user";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { RouterLink } from 'vue-router';
 
 export default {
   name: 'DashboardF1HomeView',
@@ -490,48 +486,79 @@ body, html {
 }
 
 /* Navbar */ 
-.navbar {
-  text-align: center;
-  display: flex;
-  margin-left: 15%;
+
+.grid-navbar {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr 3fr; /* Use spaces, not commas */
+  grid-template-rows: 15vh; /* 1 row */
+  gap: 20px; /* Adjust the gap between columns if needed */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
 }
 
-.navbar-icon {
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-  margin-top: 50px;
-  margin-left: 20px;
+.grid-link.navbar-title {
+  margin-right: 35px; /* Adjust the value for the right margin */
+  margin-left: 35px; /* Adjust the value for the left margin */
 }
-.navbar-icon img {
-  width: 40px ;
-  height: 40px;
-}
-.navbar-left, .navbar-right {
-  display: flex;
-  gap: 25px;
-}
-.navbar-left a, .navbar-right a {
+
+.grid-link {
+  font-family: "Onest-bold";
+  text-align: center;
   color: #FFF; 
   text-decoration: none;
-  font-size: 20px; 
-  margin-top: 50px;
-
+  font-size: 1.1rem; 
+  margin-top: 30px;
 }
-.navbar-left a:hover, .navbar-right a:hover {
+
+.grid-link a:hover {
   text-decoration: underline;
   text-decoration-color: #B81A10;
   text-underline-offset: 8px;
 }
+
+.navbar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  margin-top: 40px;
+  margin-right: 30%;
+  position: relative;
+}
+.navbar-icon img {
+  width: 35px ;
+  height: 35px;
+  transition: transform 0.3s ease; /* Added a transition for smoother movement */
+}
+
+.tooltip {
+  font-family: "Onest-Thin";
+  text-align: center;
+  color: #FFF; 
+  font-size: 1.1rem; 
+  opacity: 0; /* Initially hidden */
+  position: absolute;
+  color: #fff;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Added transition for smoother appearance and disappearance */
+  z-index: 2; /* Ensure the tooltip is above the icon */
+  right: 14%; /* Center the tooltip horizontally */
+  transform: translateX(50%) translateY(-50%); /* Center the tooltip horizontally and move it up */
+}
+
+.navbar-icon:hover .tooltip {
+  opacity: 1; /* Show on hover */
+  transform: translateX(50%) translateY(0); /* Move the tooltip down */
+}
+
+.navbar-icon:hover img {
+  transform: translateY(-80%); /* Move the icon up on hover */
+}
+
 .navbar-title {
   color: #B81A10;
   font-family: "Tektur-ExtraBold";
   font-size: 60px;
   font-weight: 700;
   line-height: normal;
-  margin-top: 30px;
-  margin-left: 40px;
-  margin-right: 40px;
 }
 
 /* Home */ 
@@ -632,7 +659,7 @@ svg {
 .acerca-leclerc-title {
   color: #FFFFFF;
   font-family: "Onest-Bold";
-  font-size: 30px;
+  font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 0;
   line-height: normal;
@@ -642,8 +669,8 @@ svg {
 
 .acerca-hamilton-text, .acerca-leclerc-text{
   color: #FFFFFF;
-  font-family: "Onest";
-  font-size: 20px;
+  font-family: "Onest-thin";
+  font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
@@ -711,7 +738,6 @@ svg {
   position: relative;
 } 
 
-
 /* Circuitos */
 
 .grid-tracks {
@@ -733,8 +759,8 @@ svg {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 98%;//289px;
-  width:  100%;//263px;
+  height: 39vh; //98%;//289px;
+  width:  100%; //263px;
   opacity: 0;
   transition: .5s ease;
   border-radius: 3vh; //15px;
@@ -743,7 +769,7 @@ svg {
   align-items: center;
   justify-content: center;
   font-size: 200%;
-  font-family: Tektur;
+  font-family: "Tektur";
   background-color: #D4CBCA; 
 }
 
@@ -762,14 +788,6 @@ svg {
   margin-bottom: 7%;
 }
 
-.tracks .track{ //nao altera nada
- /*   height: 289px;
-  width: 263px;
-  left: 0;
-  position: relative;
-  top: 0; */
-}
-
 .background-circuitos{
   background-color: #343535;
   height: 100%;
@@ -785,7 +803,7 @@ svg {
   font-family: "Onest";
   text-align: justify;
   color: #000;
-  font-size: 156%;  //font-size: 25px;
+  font-size: 1.5rem;  //font-size: 25px / 156%
   font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
