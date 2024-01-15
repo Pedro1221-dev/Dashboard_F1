@@ -76,6 +76,7 @@
 <script>
 import { useUserStore } from "@/stores/user";
 import AlertComponent from '../components/AlertComponent.vue';
+import { useToast } from "vue-toastification";
 
 export default {
   data() {
@@ -85,15 +86,23 @@ export default {
       last: "",
       username: "",
       password: "",
+      visible: false
     };
   },
+  setup() {
+      // Get toast interface
+      const toast = useToast();
+      // Make it available inside methods
+      return { toast }
+    },
   components: {
     AlertComponent,
   },
   methods: {
     async register() {
   if (!this.first || !this.last || !this.username || !this.password) {
-    this.$refs.alert.showAlert('Todos os campos são obrigatórios!', 'error');
+    //this.$refs.alert.showAlert('Todos os campos são obrigatórios!', 'error');
+    this.toast.error("Todos os Campos são Obrigatorios!");
     return;
   }
 
@@ -102,7 +111,8 @@ export default {
     await this.store.login(this.username, this.password);
     this.$router.push({ name: "home" }); // Redireciona para a página do dashboard após o login
   } catch (error) {
-    this.$refs.alert.showAlert(error.message, 'error');
+    //this.$refs.alert.showAlert(error.message, 'error');
+    this.toast.error(error.message);
   }
 },
   },

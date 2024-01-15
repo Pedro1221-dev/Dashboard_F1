@@ -2,34 +2,34 @@
   <div>
     <div class="sidenav">
       <router-link :to="{ name: 'dashboard' }">
-        <div class="icon-container">
-          <img src="../img/icons/edit.png" alt="Home" class="icon-image">
+        <div class="icon-container" :class="{ 'selected': $route.name === 'dashboard' }">
+          <img :src="$route.name === 'dashboard' ? '../src/img/icons/Home Red.png' : '../src/img/icons/Home Icon.png'" alt="Home" class="icon-image">
+          <span class="link-text">Home</span>
         </div>
-        <span class="link-text">Home</span>
       </router-link>
       <router-link :to="{ name: 'live' }">
-        <div class="icon-container">
-          <v-icon>mdi-video-wireless</v-icon>
+        <div class="icon-container" :class="{ 'selected': $route.name === 'live' }">
+          <img :src="$route.name === 'live' ? '../src/img/icons/Live Red.png' : '../src/img/icons/Live Icon.png'" alt="Live" class="icon-image">
+          <span class="link-text">Live</span>
         </div>
-        <span class="link-text">Live</span>
       </router-link>
       <router-link :to="{ name: 'standings' }">
-        <div class="icon-container">
-          <v-icon>mdi-podium</v-icon>
+        <div class="icon-container" :class="{ 'selected': $route.name === 'standings' }">
+          <img :src="$route.name === 'standings' ? '../src/img/icons/Standings Red.png' : '../src/img/icons/Standings Icon.png'" alt="Standings" class="icon-image">
+          <span class="link-text">Classificaçao</span>
         </div>
-        <span class="link-text">Classificação</span>
       </router-link>
       <router-link :to="{ name: 'pilotstats' }">
-        <div class="icon-container">
-          <v-icon>mdi-chart-bar-stacked</v-icon>
+        <div class="icon-container" :class="{ 'selected': $route.name === 'pilotstats' || $route.name === 'constructorstats' || $route.name === 'racestats'  }">
+          <img :src="$route.name === 'pilotstats' || $route.name === 'constructorstats' || $route.name === 'racestats' ? '../src/img/icons/Stats Red.png' : '../src/img/icons/Stats Icon.png'" alt="Stats" class="icon-image">
+          <span class="link-text">Estatisticas</span>
         </div>
-        <span class="link-text">Estatisticas</span>
       </router-link>
       <router-link to="" @click="logout">
         <div class="icon-container">
-          <v-icon>mdi-logout</v-icon>
+          <img src="../img/icons/Logout Icon.png" alt="Home" class="icon-image">
+          <span class="link-text">Logout</span>
         </div>
-        <span class="link-text">Logout</span>
       </router-link>
     </div>
   </div>
@@ -41,7 +41,9 @@ import { useUserStore } from "@/stores/user";
 
 export default {
   data() {
-    return {};
+    return {
+      hover: false
+    };
   },
 
   mounted() {},
@@ -56,6 +58,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.icon-image {
+  width: 50%;  
+}
 .sidenav {
   height: 100%;
   width: 160px;
@@ -67,41 +72,46 @@ export default {
   overflow-x: hidden;
   padding-top: 20px;
 }
-.icon-image {
-  width: 24px; /* Ajuste este valor para o tamanho desejado */
-  height: 24px; /* Ajuste este valor para o tamanho desejado */
-}
 
+.selected {
+  border-color: red;
+  border-color: red !important;
+}
 .icon-container {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 2px solid #ffffff;
   border-radius: 50%;
-  padding: 5px;
+  padding: 3px;
   margin-bottom: 20px; /* Adiciona espaço abaixo de cada ícone */
+  width: auto;
+  min-width: 50px;
+  height: 50px;
+  position: relative;
 }
 
 .sidenav a {
   display: flex;
-  align-items: center;
-  justify-content: center; /* Centraliza os itens na largura */
-  position: relative; /* Adicionado para posicionar o texto do link em relação a este elemento */
+    align-items: center;
+    margin-left: 10px;
+    justify-content: flex-start;
+    position: relative;
 }
 
 .sidenav .link-text {
-  position: absolute; /* Remove o texto do link do fluxo normal do documento */
-  left: 100%; /* Posiciona o texto do link à direita do ícone */
+  position: absolute;
+  left: 95%;
+  top: 50%;  // move o texto para o meio verticalmente
+  transform: translateY(-50%);  // compensa metade da altura do texto
   margin-left: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
+  
 }
 
 .sidenav a:hover .link-text {
   opacity: 1;
 }
 
-.sidenav a:hover .icon-container {
-  border-color: red; /* Faz a borda do ícone ficar vermelha quando o mouse passa sobre o link */
-}
 </style>

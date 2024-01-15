@@ -58,6 +58,7 @@
 <script>
 import { useUserStore } from "@/stores/user";
 import AlertComponent from '../components/AlertComponent.vue';
+import { useToast } from "vue-toastification";
 export default {
   data() {
     return {
@@ -65,21 +66,29 @@ export default {
       username: "",
       password: "",
       visible: false // Adicionando o estado para controlar a visibilidade da senha
+      
     };
     
   },
+  setup() {
+      // Get toast interface
+      const toast = useToast();
+      // Make it available inside methods
+      return { toast }
+    },
+
   components: {
     AlertComponent,
   },
   methods: {
-    login() {
-      try {
-        this.store.login(this.username, this.password)
-        this.$router.push({ name: "dashboard" });
-      } catch (error) {
-         this.$refs.alert.showAlert(error.message, 'error');
-      }
-    },
+    async login() {
+  try {
+    await this.store.login(this.username, this.password)
+    this.$router.push({ name: "home" });
+  } catch (error) {
+    this.toast.error("Login Falhou!");
+  }
+},
   },
 };
 </script>

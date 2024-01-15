@@ -17,7 +17,7 @@ export const useUserStore = defineStore("user", {
           // Verifica se o usuário já existe
         const existingUser = this.users.find((user) => user.username === username);
         if (existingUser) {
-          throw Error("Username already exists");
+          throw Error("Utilizador já existente");
         }
 
         const newUser = {
