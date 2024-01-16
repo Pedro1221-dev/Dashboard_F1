@@ -234,7 +234,6 @@
               return {
                 background: `linear-gradient(${colorPair[0]}, ${colorPair[1]})`
               };
-              return this.teamColors[team];
             }
           }
           return null;

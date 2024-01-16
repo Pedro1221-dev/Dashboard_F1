@@ -11,7 +11,7 @@
           v-bind="props"
           class="profile-button"
         >
-        {{ user}}
+        {{ user.username}}
             <img :src="`../src/img/avatars/${store.user.avatarNumber}.png`" alt="avatar" class="avatar">
         </v-btn>
       </template>
@@ -65,29 +65,78 @@
                   <img src="../img/components/fantasy/logo fantasy 1.png" style="width: 40%;">
                   <img src="../img/components/fantasy/Car Fantasy 2.png" style="position: relative;left: 10%;">
                 </div> 
-                <div class="div6"> STATS PILOTO FAVORITO </div>
+                <div class="div6" :style="{ background: getTeamColor(favDriver.driverId), backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }">
+                  <div class="driver-number">{{ favDriver.permanentNumber }}</div>
+                  <img :src="`../src/img/drivers/all/${favDriver.driverId}.png`" alt="">
+                  <div class="names">
+                    <div class="givenName">{{ favDriver.givenName }}</div>
+                    <div class="familyName">{{ favDriver.familyName }}</div>
+                  </div>
+                </div>
             </div>
         </div>       
 </template>
 
 <script>
 import { useUserStore } from "@/stores/user";
+import { usePilotStore } from "@/stores/pilot";
 import { RouterLink } from 'vue-router';
 import Sidenav from "../components/sidenav.vue";
 export default { 
     data() {
         return {
             store: useUserStore(),
-
+            pilotStore: usePilotStore(),
+            driverMapping: {
+              "mercedes": ["hamilton", "russell"],
+              "red bull": ["max_verstappen", "perez"],
+              "ferrari": ["leclerc", "sainz"],
+              "mclaren": ["norris", "piastri"],
+              "aston martin": ["alonso", "stroll"],
+              "alfa romeo": ["bottas", "zhou"],
+              "williams": ["albon", "sargeant"],
+              "haas f1 team": ["kevin_magnussen", "hulkenberg"],
+              "alphatauri": ["tsunoda", "devries" ,"ricciardo"],
+              "alpine f1 team": ["gasly", "ocon"],
+            },
+            teamColors: {
+              "mercedes": ["rgba(6, 157, 152, 0.8)", "rgba(14, 29, 33, 0.8)"],
+              "red bull": ["rgba(28, 38, 57, 0.8)", "rgba(116, 32, 47, 0.8)"],
+              "ferrari": ["rgba(166,4,4,0.8)","rgba(0,0,0,0.8)"],
+              "mclaren": ["rgba(254,136,4,0.8)", "rgba(0,0,0,0.8)"],
+              "aston martin": ["rgba(0,88,80,0.8)", "rgba(5,27,6,0.8)"],
+              "alfa romeo": ["rgba(127,0,0,0.8)", "rgba(0,0,0,0.8)"],
+              "williams": ["rgba(5,160,227,0.8)", "rgba(0,0,0,0.8)"],
+              "haas f1 team": ["rgba(223, 44, 44, 0.87)", "rgba(0,0,0,0.8)"],
+              "alphatauri": ["rgba(14, 22, 35, 0.87)", "rgba(0,0,0,0.8)"],
+              "alpine f1 team":["rgba(15, 28, 44,0.8)", "rgba(0,0,0,0.8)"],
+            },
         };
     },
 
     computed: {
         user() {
-        return this.store.getUser.username;
+        return this.store.getUser;
         },
         raceFinished() {
           return sessionStorage.getItem('finishedRace') === 'true';
+        },
+        pilots() {
+          return usePilotStore().getPilots;
+        },
+        favDriver() {
+          if (!this.pilots || !this.user) {
+            return null;
+          }
+
+          const foundPilot = this.pilots.find(pilot => {
+            console.log('Pilot:', pilot.givenName);
+            console.log('User:', this.user.favDriver);
+            return pilot.givenName === this.user.favDriver;
+          });
+
+          console.log('Found pilot:', foundPilot);
+          return foundPilot;
         },
     },
 
@@ -99,14 +148,27 @@ export default {
         
     },
 
+    created() {
+     this.pilotStore.fetchPilots();
+    },
+
     methods: {
         logout() {
-      this.store.logout();
-      this.$router.push({ name: "home" });
-    },
-    perfil() {
-      this.$router.push({ name: "perfil" });
-    },
+        this.store.logout();
+        this.$router.push({ name: "home" });
+      },
+      perfil() {
+        this.$router.push({ name: "perfil" });
+      },
+      getTeamColor(driverName) {
+        for (let team in this.driverMapping) {
+          if (this.driverMapping[team].includes(driverName)) {
+            let colorPair = this.teamColors[team];
+            return `linear-gradient(${colorPair[0]}, ${colorPair[1]}), url(../src/img/backgrounds/backStats.png)`;
+          }
+        }
+        return null;
+      },
     },
 };
 </script>
@@ -169,12 +231,17 @@ border-radius:10px
   max-height: 100px;
 }
 .div6 { grid-area: 1 / 1 / 3 / 5;
-  background: linear-gradient(
-    125deg,
-    rgba(28, 38, 57, 0.75),rgba(90, 34, 50, 0.75),rgba(116, 32, 47, 0.75),rgba(221, 25, 35, 0.75)), 
-  url('../img/backgrounds/backStats.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+}
+
+.driver-number {
+  position: absolute;
+    z-index: 1;
+    top: -50px;
+    left: 0px;
+    font-family: 'Onest-Bold';
+    font-size: 165px;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .profile {
@@ -229,5 +296,32 @@ border-radius:10px
   url('../img/backgrounds/bck.png');
 }
 
+.div6 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.div6 img {
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+}
+
+.div6 .givenName {
+  font-family: 'Onest-Thin';
+  text-align: right;
+  font-size: xx-large;
+}
+
+.div6 .familyName {
+  font-family: 'Onest-Bold';
+  text-align: right;
+  font-size: xxx-large;
+  margin-top: -25px;
+}
+.names{
+  margin-top:-80px;
+  margin-right: 20px;
+}
 </style>
