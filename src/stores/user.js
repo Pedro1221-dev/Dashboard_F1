@@ -13,7 +13,7 @@ export const useUserStore = defineStore("user", {
     isUser: (state) => state.isUserAuthenticated,
   },
   actions: {
-    register(first,last,username,password,avatarNumber = 1){
+    register(first,last,username,password,avatarNumber = 1,favDriver='albon'){
           // Verifica se o usuário já existe
         const existingUser = this.users.find((user) => user.username === username);
         if (existingUser) {
@@ -25,6 +25,7 @@ export const useUserStore = defineStore("user", {
           username,
           password,
           avatarNumber,
+          favDriver,
         };
       
         this.users.push(newUser);
@@ -68,9 +69,22 @@ export const useUserStore = defineStore("user", {
     },
     updateAvatar(userId, newAvatarNumber) {
       const user = this.users.find(user => user.id === userId);
-    
+      const userInUser = this.user && this.user.id === userId ? this.user : null;
+      
+      userInUser.avatarNumber = newAvatarNumber;
       if (user) {
         user.avatarNumber = newAvatarNumber;
+      } else {
+        console.error(`User with ID ${userId} not found.`);
+      }
+    },
+    updateFavDriver(userId, newFavDriver) {
+      const user = this.users.find(user => user.id === userId);
+      const userInUser = this.user && this.user.id === userId ? this.user : null;
+
+      userInUser.favDriver = newFavDriver;
+      if (user) {
+        user.favDriver = newFavDriver;
       } else {
         console.error(`User with ID ${userId} not found.`);
       }

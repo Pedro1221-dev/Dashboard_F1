@@ -47,17 +47,11 @@
       </v-card>
     </div>
   </v-form>
-  <AlertComponent
-    ref="alert"
-    message=""
-    type=""
-  />
   </div>
 </template>
 
 <script>
 import { useUserStore } from "@/stores/user";
-import AlertComponent from '../components/AlertComponent.vue';
 import { useToast } from "vue-toastification";
 export default {
   data() {
@@ -77,9 +71,6 @@ export default {
       return { toast }
     },
 
-  components: {
-    AlertComponent,
-  },
   methods: {
     async login() {
   try {

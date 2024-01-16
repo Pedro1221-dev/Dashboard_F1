@@ -6,12 +6,14 @@ const PILOT_API_BASE_URL = 'http://ergast.com/api/f1';
 export const usePilotStore = defineStore("pilot", {
   state: () => ({
     pilots: null,
-    informations: []
+    informations: [],
   }),
   
 
   getters:{
     getPilots: (state) => state.pilots,
+    getDriverMapping: state => state.driverMapping,
+    getTeamColors: state => state.teamColors,
   },
   actions: {
     fetchPilots(){
