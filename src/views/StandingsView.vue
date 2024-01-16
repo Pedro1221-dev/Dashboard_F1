@@ -91,7 +91,6 @@ export default {
       this.standingStore.fetchStandings(this.year, this.i);
     } catch (error) {
       alert(error.message);
-      console.log(error);
     }
   },
   methods: {
@@ -109,7 +108,6 @@ export default {
     this.standingStore.fetchStandings(this.year, this.i);
   },
   carByPilot(driverName) {
-    console.log(driverName);
       for (let team in this.driverMapping) {
         if (this.driverMapping[team].includes(driverName)) {
           this.imgCar = `../src/img/cars/${team}.png`;

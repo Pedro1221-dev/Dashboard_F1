@@ -385,7 +385,7 @@ export default {
 
 document.addEventListener('DOMContentLoaded', function() {
   const boxes = document.querySelectorAll(".box");
-  let activeIndex = 1;
+  let activeIndex = -1;
   let isTransitioning = false;
 
   function updateCurrentImg() {
@@ -432,7 +432,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.addEventListener("keydown", handleArrowKey);
 
-  updateCurrentImg();
 
   boxes.forEach((box, index) => {
     box.addEventListener("click", () => handleBoxClick(index));

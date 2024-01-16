@@ -73,7 +73,6 @@
 
     // Retrieve drivers based on the selected constructor name
     const drivers = driverMapping[this.selectedConstructor.name.toLowerCase()] || [];
-    console.log(this.selectedConstructor.name);
 
     // Update the drivers property in the selectedConstructor
     this.selectedConstructor.drivers = drivers.map(driverName => ({ name: driverName }));
