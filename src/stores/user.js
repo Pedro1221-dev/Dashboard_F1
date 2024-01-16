@@ -13,7 +13,7 @@ export const useUserStore = defineStore("user", {
     isUser: (state) => state.isUserAuthenticated,
   },
   actions: {
-    register(first,last,username,password,avatarNumber = 1,favDriver='albon'){
+    register(first,last,username,password,avatarNumber = 1,favDriver='Alexander'){
           // Verifica se o usuário já existe
         const existingUser = this.users.find((user) => user.username === username);
         if (existingUser) {
