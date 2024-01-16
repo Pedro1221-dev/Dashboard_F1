@@ -58,7 +58,9 @@
           </div>
           <div class="back">
             <p>Escolhe o teu piloto favorito para acompanhares todos os resultados dele !</p>
-            <button @click="dialogFav = true">Selecionar</button>
+            <div class="box" :style="{ borderColor: getTeamColor1(favDriver.driverId), boxShadow: `0px 0px 25px 9px ${getTeamColor1(favDriver.driverId)}`, borderRadius: '13px' }">
+            <button @click="dialogFav = true" class="btn-selecionar">Selecionar</button>
+          </div>
           </div>
         </div>
       </div>
@@ -238,6 +240,14 @@
           }
           return null;
         },
+        getTeamColor1(driverName) {
+          for (let team in this.driverMapping) {
+            if (this.driverMapping[team].includes(driverName)) {
+              return this.teamColors[team][0]; // retorna a primeira cor da equipe
+            }
+          }
+          return '#0b757e'; // cor padrão
+        },
       },
         
   }
@@ -392,6 +402,7 @@
 }
 
 .back{
+  padding: 10px;
   display:flex;
   flex-direction: column;
   justify-content: space-around;
@@ -414,5 +425,16 @@
   border-radius: 5px;
   align-self: flex-end;
   margin-right: 10px;
+}
+
+.btn-selecionar{
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-family: 'Onest-Bold';
+  font-size: 20px;
+  cursor: pointer;
 }
   </style>

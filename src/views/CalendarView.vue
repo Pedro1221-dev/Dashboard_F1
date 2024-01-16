@@ -1,6 +1,6 @@
 <template>
         <Sidenav></Sidenav>
-    <div>
+    <div class="main">
 
     </div>
 </template>
