@@ -10,6 +10,9 @@ import RaceStatsView from '../views/RaceStatsView.vue'
 import ConstructorStatsView from '../views/ConstructorStatsView.vue'
 import PerfilView from '../views/PerfilView.vue'
 import CalendarView from '../views/CalendarView.vue'
+import GuideFlagView from '../views/GuideFlagView.vue'
+import GuideTireView from '../views/GuideTireView.vue'
+
 import { useUserStore } from "@/stores/user";
 
 const router = createRouter({
@@ -76,6 +79,18 @@ const router = createRouter({
       path: '/dashboard/calendar',
       name: 'calendar',
       component: CalendarView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/dashboard/guide-flags',
+      name: 'guide-flags',
+      component: GuideFlagView,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/dashboard/guide-tires',
+      name: 'guide-tires',
+      component: GuideTireView,
       meta: { requiresAuth: true },
     },
 
