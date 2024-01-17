@@ -44,6 +44,7 @@
                   </v-alert>
                 </div>
                 <RouterLink :to="{ name: 'calendar' }" class="div2">
+                  <div class="month">Janeiro</div>
                   <div class="calendar-grid">
                     <div class="day" v-for="day in 31" :key="day">{{ day }}</div>
                   </div>
