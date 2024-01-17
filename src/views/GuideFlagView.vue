@@ -8,56 +8,56 @@
 
         <div class="grid-flags">
             <div class="card-flags">
-                <img src="../img/guide/flags/greenFlag.png">
+                <img src="../img/guide/flags/greenFlag.jpg">
                 <div class="title">Bandeira Verde</div>
                 <div class="flag-overlay text" :class="{ 'show': overlayGreen }" @click="overlayGreen = false">A sessão começou ou vai continuar.</div>
                 <div class="icon" @click="overlayGreen = !overlayGreen"><img src="../img/icons/upload.png" alt=""></div>
             </div>
 
             <div class="card-flags">
-                <img src="../img/guide/flags/blueFlag.png">
+                <img src="../img/guide/flags/blueFlag.jpg">
                 <div class="title">Bandeira Azul</div>
                 <div class="flag-overlay text" :class="{ 'show': overlayBlue }" @click="overlayBlue = false">Indica ao piloto que um carro com avanço está prestes a ultrupassá-lo e que tem de ceder passagem.</div>
                 <div class="icon" @click="overlayBlue = !overlayBlue"><img src="../img/icons/upload.png" alt=""></div>
             </div>
 
             <div class="card-flags">
-                <img src="../img/guide/flags/whiteFlag.png">
+                <img src="../img/guide/flags/whiteFlag.jpg">
                 <div class="title">Bandeira Branca</div>
                 <div class="flag-overlay text" :class="{ 'show': overlayWhite }" @click="overlayWhite = false">Informa o piloto que há carros lentos à sua frente.</div>
                 <div class="icon" @click="overlayWhite = !overlayWhite"><img src="../img/icons/upload.png" alt=""></div>
             </div>
 
             <div class="card-flags">
-                <img src="../img/guide/flags/redFlag.png">
+                <img src="../img/guide/flags/redFlag.jpg">
                 <div class="title">Bandeira Vermelha</div>
                 <div class="flag-overlay text" :class="{ 'show': overlayRed }" @click="overlayRed = false">A sessão parou.</div>
                 <div class="icon" @click="overlayRed = !overlayRed"><img src="../img/icons/upload.png" alt=""></div>
             </div>
 
             <div class="card-flags">
-                <img src="../img/guide/flags/blackFlag.png">
+                <img src="../img/guide/flags/blackFlag.jpg">
                 <div class="title">Bandeira Preta</div>
                 <div class="flag-overlay text" :class="{ 'show': overlayBlack }" @click="overlayBlack = false">O piloto é desqualificado e é tem de regressar à pit imediatamente.</div>
                 <div class="icon" @click="overlayBlack = !overlayBlack"><img src="../img/icons/upload.png" alt=""></div>
             </div>
 
             <div class="card-flags">
-                <img src="../img/guide/flags/yellowFlag.png">
+                <img src="../img/guide/flags/yellowFlag.jpg">
                 <div class="title">Bandeira Amarela</div>
                 <div class="flag-overlay text" :class="{ 'show': overlayYellow }" @click="overlayYellow = false">Significa perigo.</div>
                 <div class="icon" @click="overlayYellow = !overlayYellow"><img src="../img/icons/upload.png" alt=""></div>
             </div>
 
             <div class="card-flags">
-                <img src="../img/guide/flags/yellowRedFlag.png">
+                <img src="../img/guide/flags/yellowRedFlag.jpg">
                 <div class="title">Bandeira Amarela e Riscas Vermelhas</div>
                 <div class="flag-overlay text" :class="{ 'show': overlayYellowRed }" @click="overlayYellowRed = false">Indica que a pista está escorregadia.</div>
                 <div class="icon" @click="overlayYellowRed = !overlayYellowRed"><img src="../img/icons/upload.png" alt=""></div>
             </div>
 
             <div class="card-flags">
-                <img src="../img/guide/flags/checkeredFlag.png">
+                <img src="../img/guide/flags/checkeredFlag.jpg">
                 <div class="title">Bandeira Axadrezada </div>
                 <div class="flag-overlay text" :class="{ 'show': overlayCheckered }" @click="overlayCheckered = false">A sessão terminou.</div>
                 <div class="icon" @click="overlayCheckered = !overlayCheckered"><img src="../img/icons/upload.png" alt=""></div>
@@ -127,7 +127,7 @@ export default {
 }
 
 .card-flags img{
-    width: 50%;
+    width: 60%;
 }
 
 .card-flags {
