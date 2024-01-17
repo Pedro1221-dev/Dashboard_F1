@@ -1,8 +1,11 @@
 <template>
     <Sidenav></Sidenav>
     <div class="main">
-        <RouterLink :to="{ name: 'guide-tires' }">Pneus</RouterLink>
-   
+        <div class="links">
+            <RouterLink :to="{ name: 'guide-tires' }" class="links">Pneus</RouterLink>
+            <div class="bandeiras">Bandeiras</div>
+        </div>
+        
         <div class="flags">
             <div class="div1"><img src="../img/guide/flags/greenFlag.png" alt=""></div>
             <div class="div2 title">Bandeira Verde</div>
@@ -46,14 +49,46 @@ import Sidenav from "../components/sidenav.vue";
 </script>
 
 <style lang="scss" scoped>
-
+.bandeiras{
+    margin-left: 1%;
+    color: #FFF;
+    text-decoration: underline;
+    text-underline-offset: 10%;
+    text-decoration-color: #C8473F;
+    text-decoration-thickness: 2px;
+}
+.links {
+    display: flex;
+    font-family: "Onest";
+    font-size: 1.5rem;
+    color: #FFF; 
+}
 
 .flags {
+    margin-top: 3%;
     display: grid;
     grid-template-columns: repeat(8, 1fr); /* Updated grid-template-columns */
     grid-template-rows: repeat(1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+}
+
+.flags div {
+    display: flex;
+    font-size: small;
+    background-color: #343535;
+    color: #FFFFFF;
+    
+    img {
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    }
+}
+
+.flags .title {
+    font-size: 1.2rem;
+    font-family: "Onest-Bold";
 }
 
 .div1 { grid-area: 1 / 1 / 3 / 2; }
@@ -82,23 +117,7 @@ import Sidenav from "../components/sidenav.vue";
 .div24 { grid-area: 4 / 8 / 5 / 9; }
 
 
-.flags div {
-    display: flex;
-    font-size: small;
-    background-color: #343535;
-    color: #FFFFFF;
-    
-    img {
-    max-width: 80%;
-    max-height: 80%;
-    margin: auto;
-    }
-}
 
-.flags .title {
-    font-size: 1.2rem;
-    font-family: "Onest-Bold";
-}
 
 </style>
 
