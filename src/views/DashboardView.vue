@@ -43,15 +43,28 @@
                     </div>
                   </v-alert>
                 </div>
-                <RouterLink :to="{ name: 'calendar' }" class="div2">
-                  <div class="month">Janeiro</div>
-                  <div class="calendar-grid">
-                    <div class="day" v-for="day in 31" :key="day">{{ day }}</div>
-                  </div>
-                </RouterLink>
+                <div class="div2">
+                  <div class="month">
+      <button @click="previousMonth">&lt;</button>
+      {{ monthNames[currentMonth.getMonth()] }}
+      <button @click="nextMonth">&gt;</button>
+    </div>
+    <RouterLink :to="{ name: 'calendar' }">
+      <div class="calendar-grid">
+        <div 
+          class="day" 
+          v-for="day in getDaysInMonth(currentMonth)" 
+          :key="day"
+          :style="getDayStyle(day)"
+        >
+          {{ day }}
+        </div>
+      </div>
+    </RouterLink>
+                </div>
                 <div class="div3">
-                  <h3>TITULO</h3>
-                  <p style="font-size: small;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, consectetur neque quis eius facilis nemo obcaecati fugit. Iste cupiditate natus quo eos nisi, deleniti perspiciatis ut, neque, fuga commodi in.</p>
+                  <div style="font-size: 25px; font-family: 'Onest-Bold';color: #D4CBCA;">F1 Rumo à Sustentabilidade</div>
+                  <p class="gradient-text"  style="font-size: 13px; font-family: 'Onest-Thin';color: #D4CBCA;">As equipas de Fórmula 1 estão a dar um passo inovador em direção à sustentabilidade. Em uma iniciativa pioneira, várias equipas do grid anunciaram a adoção de tecnologias mais ecológicas em seus processos de fabricação e operações durante as corridas. Essa mudança visa reduzir a pegada de carbono e promover práticas mais sustentáveis no mundo da F1.</p>
                 </div>
                 <RouterLink :to="{ name: 'standings' }" class="div4">
                   Classificaçao Geral
@@ -81,6 +94,8 @@
 <script>
 import { useUserStore } from "@/stores/user";
 import { usePilotStore } from "@/stores/pilot";
+import { useCalendarStore } from '../stores/calendar.js';
+import { format, addMonths, subMonths, getDaysInMonth } from 'date-fns'
 import { RouterLink } from 'vue-router';
 import Sidenav from "../components/sidenav.vue";
 export default { 
@@ -88,6 +103,7 @@ export default {
         return {
             store: useUserStore(),
             pilotStore: usePilotStore(),
+            calendarStore: useCalendarStore(),
             driverMapping: {
               "mercedes": ["hamilton", "russell"],
               "red bull": ["max_verstappen", "perez"],
@@ -112,6 +128,11 @@ export default {
               "alphatauri": ["rgba(14, 22, 35, 0.87)", "rgba(0,0,0,0.8)"],
               "alpine f1 team":["rgba(15, 28, 44,0.8)", "rgba(0,0,0,0.8)"],
             },
+            currentMonth: new Date(),
+            monthNames: Array.from({length: 12}, (v, i) => {
+              let month = new Date(2000, i).toLocaleString('pt-BR', {month: 'long'});
+              return month.charAt(0).toUpperCase() + month.slice(1);
+            }),
         };
     },
 
@@ -139,6 +160,12 @@ export default {
           console.log('Found pilot:', foundPilot);
           return foundPilot;
         },
+        formattedMonth() {
+          return format(this.currentMonth, 'MMMM')
+        },
+        races() {
+          return this.calendarStore.getRaces
+        }
     },
 
     components: {
@@ -146,7 +173,7 @@ export default {
     },
     
     mounted() {
-        
+      this.calendarStore.fetchRaces()
     },
 
     created() {
@@ -170,6 +197,37 @@ export default {
         }
         return null;
       },
+      previousMonth() {
+      this.currentMonth = subMonths(this.currentMonth, 1)
+    },
+    nextMonth() {
+      this.currentMonth = addMonths(this.currentMonth, 1)
+    },
+    getDaysInMonth(date) {
+      const days = []
+      for (let i = 1; i <= getDaysInMonth(date); i++) {
+        days.push(i)
+      }
+      return days
+    },
+    getDayStyle(day) {
+      if (this.races) {
+        const year = this.currentMonth.getFullYear();
+        const month = this.currentMonth.getMonth();
+        console.log(this.races)
+        console.log(day)
+        const race = this.races.find(race => format(new Date(race.date), 'yyyy-MM-dd') === format(new Date(year, month, day), 'yyyy-MM-dd'))
+        console.log(race)
+        if (race) {
+          return {
+            background: `linear-gradient(rgba(91, 91, 91, 0.7), rgba(91, 91, 91, 0.7)), url(../src/img/flags/${race.Circuit.Location.country.toLowerCase()}.png)`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }
+        }
+      }
+      return {}
+    }
     },
 };
 </script>
@@ -216,6 +274,20 @@ border-radius:10px
   flex-direction: column;
   justify-content: flex-end;
 }
+.gradient-text {
+    position: relative;
+  }
+
+  .gradient-text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(65, 65, 65, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    border-radius: 10px;
+  }
 .div4 { grid-area: 4 / 1 / 7 / 3;
   background:
   linear-gradient(rgba(49, 49, 49, 0.67),rgba(49, 49, 49, 0.67)),

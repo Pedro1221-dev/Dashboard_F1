@@ -25,6 +25,12 @@
           <span class="link-text">Estatisticas</span>
         </div>
       </router-link>
+      <router-link :to="{ name: 'guide-flags' }">
+        <div class="icon-container" :class="{ 'selected': $route.name === 'guide-flags' || $route.name === 'guide-tires'  }">
+          <img :src="$route.name === 'guide-flags' || $route.name === 'guide-tires' ? '../src/img/icons/Guide Red.png' : '../src/img/icons/Guide Icon.png'" alt="Stats" class="icon-image">
+          <span class="link-text">Guia</span>
+        </div>
+      </router-link>
       <router-link to="" @click="logout">
         <div class="icon-container">
           <img src="../img/icons/Logout Icon.png" alt="Home" class="icon-image">
@@ -62,6 +68,7 @@ export default {
   width: 50%;  
 }
 .sidenav {
+  display: flex;
   height: 100%;
   width: 160px;
   position: fixed;
@@ -71,6 +78,8 @@ export default {
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .selected {
