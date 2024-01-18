@@ -95,7 +95,7 @@ export default {
 
 /* Header */
 .bandeiras{
-    margin-left: 1%;
+    margin-left: 2%;
     color: #FFF;
     text-decoration: underline;
     text-underline-offset: 10%;

@@ -142,7 +142,7 @@ export default {
 // header //
 
 .pneus{
-    margin-right: 1%;
+    margin-right: 2%;
     color: #FFF;
     text-decoration: underline;
     text-underline-offset: 10%;
